@@ -1,0 +1,197 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Erkl\IeC {\"a}rung}{iii}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Kurzfassung}{vi}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{vii}{chapter*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Einf\IeC {\"u}hrung in Android}{2}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Geschichte}{2}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Versionen}{3}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Nicht kommerzielle Versionen}{3}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Alpha}{3}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Beta}{3}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Kommerzielle Versionen}{4}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Android 1.0}{4}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cupcake - 1.5}{4}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Donut - 1.6}{4}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Eclair - 2.0, 2.1}{5}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Froyo - 2.2}{5}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Gingerbread - 2.3}{5}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Honeycomb - 3}{5}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ice Cream Sandwich - 4.0}{5}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Jelly Bean - 4.1, 4.2, 4.3}{5}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{KitKat - 4.4}{5}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Architektur}{6}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Linux Kernel}{6}{subsection.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Android Runtime}{7}{subsection.2.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Libraries}{7}{subsection.2.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Application Framework}{7}{subsection.2.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Activity Manager}{8}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Window Manager}{8}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Content Provider}{8}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{View System}{8}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Package Manager}{10}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Resource Manager}{10}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.5}Application}{10}{subsection.2.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Grundbegriffe der parallelen Programmierung}{11}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Grundbegriffe}{11}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Thread}{11}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Multithreading}{11}{subsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}M\IeC {\"o}glichkeiten zur Synchronisation}{12}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Lock}{12}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Semaphore}{13}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Gefahren der parallelen Programmierung}{13}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Deadlock}{13}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Race Condition}{14}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Multithreading in Android}{15}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Asynchrone Tasks}{16}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{protected void onPreExecute()}{16}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{protected abstract Result doInBackground(Params... params)}{16}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{protected void onProgressUpdate(Progress... values)}{16}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{protected void onPostExecute(Result result)}{16}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{protected void onCancelled(Result result)}{17}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Verwendete Entwicklungsumgebung - Android Studio}{18}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Allgemeines}{18}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Ant}{18}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Gradle}{19}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Android Debug Bridge - adb}{19}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Client}{19}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Server}{20}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Daemon}{20}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Dalvik Debug Monitor Server - DDMS}{20}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Speicher\IeC {\"u}berwachung}{20}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Method Profiling - Traceview}{21}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Timeline Panel}{21}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Profile Panel}{21}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Systemlogs - logcat}{22}{subsection.4.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Log.i}{22}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Log.e}{22}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Log.wtf}{22}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Android Virtual Device - AVD}{23}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Android Version}{23}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}CPU}{24}{subsection.4.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}SD Karte}{24}{subsection.4.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.4}Snapshot}{24}{subsection.4.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.5}Hardwareoptionen}{24}{subsection.4.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Emulator}{24}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Hardware Anbindung}{25}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Debuggen einer Multithreaded Applikation}{26}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Verwendete Applikation}{26}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Oberfl\IeC {\"a}che}{26}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Ablauf}{26}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Verwendeter Task}{28}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Erkennung des Deadlocks}{30}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Thread\IeC {\"u}bersicht}{30}{subsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Logcat}{31}{subsection.5.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.3}Traceview}{32}{subsection.5.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.4}Fazit}{33}{subsection.5.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Performancevergleich zwischen Java Threads und asynchronen Tasks}{34}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Verwendete Applikation}{34}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Oberfl\IeC {\"a}che}{34}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Ablauf}{34}{subsection.6.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Verwendete Mobilger\IeC {\"a}te}{36}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Nexus 4 \cite {48}}{36}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Samsung Galaxy S4 \cite {49}}{36}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Ergebnisse}{36}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Schlussbemerkungen}{40}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Quellenverzeichnis}{41}{appendix*.50}

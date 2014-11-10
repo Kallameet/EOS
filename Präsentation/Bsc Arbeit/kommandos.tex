@@ -1,0 +1,52 @@
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+
+%
+% Kommandos für das Zitieren.
+%
+\newcommand{\zitiereSeite}[2]{\cite[][S.#2]{#1}}
+\newcommand{\zitiereKapitel}[2]{\cite[][Kap.#2]{#1}}
+\newcommand{\zitiere}[1]{\cite[]{#1}}
+
+\newcommand{\vergleiche}[2]{(nach \cite[][S.#2]{#1})}
+
+\newcommand{\sieheSeite}[2]{(siehe \cite[][S.#2]{#1})}
+\newcommand{\sieheKapitel}[2]{(siehe \cite[][Kap.#2]{#1})}
+\newcommand{\siehe}[1]{(siehe \cite{#1})}
+%
+% Kurzkommandos für Abbildungen, sowohl zum Referenzieren als auch zum Einfügen
+%
+
+%
+% Kommandos für Textersetzungen, Fett, Kursiv, Mehrzeilig,...
+%
+\newcommand{\dbcommand}[1]{\textit{#1}}
+\newcommand{\dbfile}[1]{\textit{#1}}
+\newcommand{\dbname}[1]{\textbf{#1}}
+
+\newcommand{\klasse}[1]{\textbf{#1}}
+\newcommand{\member}[1]{\textit{#1}}
+\newcommand{\funktion}[1]{\texttt{#1}}
+
+\newcommand{\controller}[1]{\textbf{#1}}
+\newcommand{\resource}[1]{\textit{#1}}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  basicstyle={\small\ttfamily},
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  captionpos=b
+}
+\renewcommand{\lstlistingname}{Ausschnitt}
+\renewcommand{\lstlistlistingname}{List von \lstlistingname en}

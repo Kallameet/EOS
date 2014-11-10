@@ -1,0 +1,95 @@
+% IEEE Paper Template for A4 Page Size (V1)
+% Sample Conference Paper using IEEE LaTeX style file for A4 pagesize.
+% Copyright (C) 2006-2008 Causal Productions Pty Ltd.
+% Permission is granted to distribute and revise this file provided that
+% this header remains intact.
+%
+% REVISION HISTORY
+% 20080211 changed some space characters in the title-author block
+%
+\documentclass[10pt,conference,a4paper]{IEEEtran}
+\usepackage{times,amsmath,epsfig}
+\include{kommandos}
+%
+\title{Dalvik VM}
+%
+\author{%
+% author names are typeset in 11pt, which is the default size in the author block
+{Reinhard Penn, Sebastian Ratzenböck}%
+% add some space between author names and affils
+}
+%
+\begin{document}
+\maketitle
+%
+\begin{abstract}
+
+\end{abstract}
+
+%
+\section{Allgemeines}
+Bei Dalvik handelt es sich um eine Open Source Software die von Dan Bornstein entwickelt wurde. Benannt ist sie nach einem Fischerdorf in Eyjafjörður, Island. Veröffentlicht wurde die Software unter Apache License 2.0. Die Ausführung findet auf einem Linux Kernel statt.
+\\
+\\
+Verwendung findet Dalvik in Googles Betriebssystem Android. Einsatz findet Dalvik hierbei als virtuelle Maschine. Der Hauptverwendungsbereich liegt im Mobilbereich, wie zum Beispiel bei Smartphones, Tablets und seit neuestem auch bei Smart Tvs und Wearables, wie Smartwatches.
+
+
+\section{Architektur}
+In diesem Kapitel wird die Architektur der Dalvik Virtual Machine erklärt. Besonderes Augenmerk wird hierbei auf den Aufbau der \member{.dex} Datei gelegt.
+
+
+\subsection{Funktion}
+In Android bekommt jeder Prozess seine eigene virtuelle Maschine, dabei handelt es sich um eine Dalvik VM. Sie ähnelt teilweise einer Java VM. Ein bedeutender Unterschied ist allerdings, dass eine Java VM stapelbasiert und eine Dalvik VM registerbasiert arbeitet. Diese registerbasierte Arbeitsweise lehnt sich an moderne Prozessorarchitekturen an. Sie verarbeitet Registermaschinencode, dadurch wird die Dalivk VM schneller als die Java VM und ist ressourcenschonender.
+\\
+\\
+Ein weiterer bedeutender Unterschied liegt darin, dass eine Dalvik VM klassische Java Bibliotheken nicht unterstützt, zum Beispiel \member{AWT} und \member{Swing}. Es werden eigene Bibliotheken verwendet, die Apache Harmony als Grundlage verwenden.
+\\
+\\
+Ein wichtiger Bestandteil der \member{SDK} ist das Tool \member{dx}. Es sorgt dafür, dass Java Binärdaten in Dalvik Executables umgewandelt werden. Das heißt es wandelt \member{.class} Dateien in \member{.dex} Dateien um. Bei dieser Umwandlung können auch mehrere \member{.class} Dateien zu einer \member{.dex} Datei zusammengefasst werden, beziehungsweise kann der Speicherbedarf, mithilfe von \member{.odex} Dateien optimiert werden.
+
+
+\subsection{.dex Format}
+In .dex Dateien werden die Klassen Definitionen und die dazugehörigen Daten gespeichert. Es handelt sich dabei um die ausführbaren Dateien der Dalvik VM. Android Programme werden zuerst in Java Bytecode kompiliert. Dieser wird im Anschluss in Dalvik Bytecode übersetzt. 
+\\
+\\
+In Abbildung 1 ist der Aufbau einer .dex Datei im Vergleich zu einer .class Datei von Java zu sehen. Für alle folgenden Listen der Datei dürfen keine doppelten Einträge vorhanden sein.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{DexFileFormat}
+\caption{Dex Dateiformat}
+\label{fig:DexFileFormat}
+\end{figure}
+
+\subsubsection{Header}
+In Ausschnitt 1 ist der Header der \member{.dex} Datei zu sehen. Dabei handelt es sich um eine bestimmte Bytefolge die den Start der Datei bestimmt.
+
+\begin{lstlisting}[float,floatplacement=H,caption=Dex Header]
+ubyte[8] DEX_FILE_MAGIC = 
+{ 0x64 0x65 0x78 0x0a 0x30 0x33 0x35 0x00 } 
+= "dex\n035\0"
+
+\end{lstlisting}
+
+\subsubsection{StringIds}
+Hierbei handelt es sich um eine Liste aller Strings die in der Datei verwendet werden. Die Liste muss sortiert sein und darf keine doppelten Einträge enthalten. Mögliche Inhalte sind zum Beispiel konstante Strings und Funktionsnamen.
+
+\subsubsection{TypeIds}
+Dies ist eine Liste aller verwendeten Typen dieser Datei. Dazu gehören Klassen, Arrays, und Primitive Datentypen. Diese Liste ist nach den \member{StringIds} sortiert.
+
+\subsubsection{ProtoIds}
+In dieser Liste befinden sich alle Methoden Prototypen, die in \member{.dex} Datei verwendet werden. Die Prototypen sind primär anhand ihrer Rückgabetypen sortiert und danach anhand ihrer Argumente.
+
+\subsubsection{FieldIds}
+Diese Liste enthält alle Felder die von der \member{.dex} Datei referenziert werden. Diese Liste wird anhand des Feldtypen und Feldnamen sortiert.
+
+\subsubsection{MethodIds}
+In der Methoden Liste werden alle von der \member{.dex} Datei referenzierten Methoden aufgelistet. Diese Liste wird nach dem Methodennamen und dem Methodenprototypen sortiert.
+
+\subsubsection{ClassDefs}
+In dieser Liste werden die Klassendefinitionen der \member{.dex} Datei angegeben. Die Liste muss so geordnet werden, dass übergeordnete Klassen und Interfaces vor den davon ableitenden Klassen angeführt werden.
+
+\subsubsection{Data}
+In dem Data werden zusätzliche Daten für die oben angeführten Listen gespeichert. Die verschiedenen Elemente haben verschiedene Alignements und padding bytes werden, wenn notwendig, eingefügt. Des weiteren befinden sich in diesem Bereich die Daten von statisch verlinkten Dateien. Bei nicht verlinkten Dateien ist dieser Teilbereich leer.
+
+\end{document}

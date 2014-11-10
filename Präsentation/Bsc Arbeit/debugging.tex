@@ -1,0 +1,178 @@
+\chapter[Debuggen einer Multithreaded Applikation] {Debuggen einer Multithreaded Applikation}       
+\label{cha:debugging}
+
+In diesem Kapitel werden anhand einer Beispielapplikation die verschiedenen Möglichkeiten einen Deadlock aufzuspüren untersucht. Für das Debuggen wird ein Emulator mit der Android Version 4.4.2 verwendet.
+
+\section{Verwendete Applikation}
+\subsection{Oberfläche}
+Die Oberfläche der Applikation besteht aus drei Buttons und einer Checkbox, wie in Abbildung 5.1 zu sehen ist. 
+\\
+\\
+Mit den ersten beiden Buttons werden die asynchronen Tasks gestartet. Der Button \member{Start Task} startet zwei Tasks der Klasse \member{DeadlockTask}. Der Button \member{Start Task Logcat} startet zwei Tasks der Klasse \member{DeadlockTaskLogcat}. Der Unterschied zwischen den beiden Klassen ist, dass in der \member{DeadlockTaskLogcat} Klasse Logausgaben vorhanden sind, in der anderen Klasse aber nicht.
+\\
+\\
+Die Checkbox \member{Enable Deadlock} stellt ein, ob die Tasks einen Deadlock auslösen oder nicht.
+\\
+\\
+Mit dem Button \member{Close Application} wird die Applikation beendet.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{DebugAppUI}
+\caption{Oberfläche der Applikation}
+\label{fig:DebugAppUI}
+\end{figure}
+
+\subsection{Ablauf}
+Wird einer der ersten beiden Buttons geklickt, werden zwei Tasks seiner jeweiligen Klasse gestartet. Den Tasks werden jeweils zwei Locks mitgegeben. Der erste Task bekommt Lock 1 als erstes und Lock 2 als zweites übergeben. Task 2 bekommt die Locks in umgekehrter Reihenfolge übergeben. Dieses Verhalten ist in Ausschnitt 5.1 zu sehen. Startet man die Tasks über die \member{execute} Methode, werden sie nacheinander ausgeführt. Dadurch würde es zu keinen Deadlock kommen. In dieser Applikation soll allerdings ein Deadlock auftreten, deshalb werden die Tasks mithilfe eines sogenannten \member{Executor} gestartet. Dieser ermöglicht die parallele Ausführung und somit einen Deadlock.
+\\
+\begin{lstlisting}[float,floatplacement=H,caption=Starten der Tasks]
+new DeadlockTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, lockList.get(0), lockList.get(1));
+Wait();
+new DeadlockTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, lockList.get(1), lockList.get(0));
+\end{lstlisting}
+\\
+Die Locks werden in jeweils umgekehrter Reihenfolge übergeben um einen Deadlock zu ermöglichen. Um aber nicht immer einen Deadlock auslösen zu müssen, wird die Applikation nach dem Start des ersten Tasks pausiert. Die Länge der Pause hängt vom Zustand der Checkbox \member{Enable Deadlock} ab wie in Ausschnitt 5.2 zu sehen ist. Wird ein Deadlock gewünscht beträgt die Pause 50 Millisekunden. Wird kein Deadlock gewünscht, pausiert die Applikation für zwei Sekunden. Die Länge dieser beiden Pausen wurde in Abhängigkeit von der Zeit, die der Task zwischen dem Sperren der beiden Locks wartet, gewählt.
+
+\begin{lstlisting}[float,floatplacement=H,caption=Pausieren der Applikation]
+private void Wait()
+{
+    if (cbDeadlock.isEnabled())
+    {
+        SystemClock.sleep(50);
+    }
+    else
+    {
+        SystemClock.sleep(2000);
+    }
+}
+\end{lstlisting}
+
+
+\section{Verwendeter Task}
+Die Klasse \member{DeadlockTaskLogcat} leitet von der Basisklasse \member{AsyncTask} ab. Von dieser wird die Methode \member{doInBackground} überschrieben. Andere Methoden der Basisklasse müssen für diesen Fall nicht überschrieben werden. 
+\\
+\\
+Der Methode \member{doInBackground(Lock... params)} wird als Eingangsparameter ein Array von Locks übergeben. Die Länge des Arrays ist frei wählbar und die einzelnen Locks werden mit einem Beistrich getrennt übergeben. In diesem Beispiel werden immer nur die ersten beiden Locks verwendet. Nach dem Sperren von Lock 1 wird der Task für 250 Millisekunden pausiert. Diese Pause ermöglicht es mit Hilfe eines zweiten Tasks, welcher zuerst Lock 2 sperrt, einen Deadlock zu erzeugen. Der zugehörige Code ist in Ausschnitt 5.3 zu sehen.
+\\
+\begin{lstlisting}[float,floatplacement=H,caption=Asynchroner Task]
+public class DeadlockTaskLogcat extends AsyncTask<Lock, Void, Void>
+{
+    protected Void doInBackground(Lock... params)
+    {
+        if (params != null && params.length >= 2)
+        {
+            Lock lock1 = params[0];
+            Lock lock2 = params[1];
+
+            Log.i(Thread.currentThread().getName(), "Lock1 locking.");
+            lock1.lock();
+            try
+            {
+                Log.i(Thread.currentThread().getName(), "Lock1 locked.");
+                SystemClock.sleep(250);
+
+                Log.i(Thread.currentThread().getName(), "Lock2 locking.");
+                lock2.lock();
+                try
+                {
+                    Log.i(Thread.currentThread().getName(), "Lock2 locked.");
+                    SystemClock.sleep(250);
+                }
+                finally
+                {
+                    lock2.unlock();
+                    Log.i(Thread.currentThread().getName(), "Lock2 unlocked.");
+                }
+            }
+            finally
+            {
+                lock1.unlock();
+                Log.i(Thread.currentThread().getName(),"Lock1 unlocked.");
+            }
+        }
+        return null;
+    }
+}
+\end{lstlisting}
+\\
+Logausgaben, wie in Ausschnitt 5.4 zu sehen sind, werden vor und nach dem Sperren sowie nach dem Freigeben eines Locks, erzeugt. In diesem Fall wurden die Logausgaben erzeugt indem der Button \member{Start Task Logcat} gedrückt und die Checkbox \member{Enable Deadlock} nicht aktiviert wurde.
+
+\begin{lstlisting}[float,floatplacement=H,caption=Logausgaben ohne Deadlock]
+08-20 15:03:12.837    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock1 locking.
+08-20 15:03:12.837    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock1 locked.
+08-20 15:03:13.107    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock2 locking.
+08-20 15:03:13.107    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock2 locked.
+08-20 15:03:13.367    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock2 unlocked.
+08-20 15:03:13.367    2440-2458/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock1 unlocked.
+08-20 15:03:17.867    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock1 locking.
+08-20 15:03:17.917    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock1 locked.
+08-20 15:03:18.177    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock2 locking.
+08-20 15:03:18.177    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock2 locked.
+08-20 15:03:18.437    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock2 unlocked.
+08-20 15:03:18.437    2440-2459/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock1 unlocked.
+\end{lstlisting}
+
+
+\section{Erkennung des Deadlocks}
+Im folgenden Abschnitt werden drei Möglichkeiten zur Erkennung des Deadlocks getestet. Als Erstes wird die Threadübersicht mit den Callstacks der einzelnen Threads verwendet. Als Zweites wird mithilfe von Logausgaben versucht den Deadlock aufzuspüren. Als letztes wird noch ein Traceview verwendet um ihn zu finden.
+
+\subsection{Threadübersicht}
+In der Threadübersicht sind alle zurzeit laufenden Threads der Applikation zusehen. Die in Abbildung 5.2 zu sehende Threadübersicht wurde erzeugt, indem man in der Applikation den Button \member{Start Task} drückt und die Checkbox \member{Enable Deadlock} aktiviert. Mithilfe der Debug-Tools kann nun die Threadübersicht angezeigt werden.
+\\
+\\
+Zum Aufspüren des Deadlocks betrachten wir nun die drei obersten Threads. Die anderen Threads sind in diesem Fall irrelevant, denn sie sind nur System Threads. Die ersten beiden Threads sind die der asynchronen Tasks. Der dritte Thread ist der Hauptthread der Applikation. Wie man in der Abbildung erkennen kann, läuft der Hauptthread noch immer und ist im Zustand \member{runnable}. Die beiden Threads der asynchronen Tasks sind allerdings im Zustand \member{waiting}. Dies kann darauf hindeuten, dass sie gerade auf eine externe Ressource oder auf ein Lock warten und wieder fortgesetzt werden. Es kann sich dabei aber auch um einen Deadlock handeln.
+\\
+\\
+Auf der rechten Seite der Abbildung ist der aktuelle Callstack, des ausgewählten Threads, zu sehen. In diesem Fall handelt es sich um den Thread AsyncTask \#1. Im Callstack können wir erkennen, dass der Thread gerade ein Lock anfordert. Der Thread hat es allerdings nicht sofort erhalten und hat den Vorgang pausiert. Wechselt man nun in den Callstack des Threads AsyncTask \#2 würde man sehen, dass dieser sich in dem exakt selben Zustand befindet. Da diese beiden Threads die einzigen beiden Threads in der Applikation sind die ein Lock anfordern kann man daraus auf einen Deadlock schließen. Tritt dieser Fall allerdings in einer größeren Applikation auf und man sich nicht sicher ist, dass ein Deadlock vorhanden ist, bietet es sich auf jeden Fall an zusätzliche Logausgaben einzubauen und den Code zu überdenken.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{CallStackAsyncTask1}
+\caption{Callstack eines asynchronen Tasks}
+\label{fig:CallStackAsyncTask1}
+\end{figure}
+
+\subsection{Logcat}
+Bei der Erkennung des Deadlocks mithilfe von Logausgaben wurden die asynchronen Tasks mit dem Button \member{Start Task Logcat} gestartet. Die Checkbox \member{Enable Deadlock} wurde wieder aktiviert. Ein Logeintrag besteht aus Datum und Uhrzeit, Name der Applikation, Name des Thread und Text der Logausgabe. 
+\\
+\\
+In Ausschnitt 5.5 sind die Logausgaben der beiden Threads zu sehen. An diesen kann man erkennen, dass AsyncTask \#1 zuerst gestartet wurde und unmittelbar sein erstes Lock erhalten hat. Wie in Ausschnitt 5.3 bereits zu sehen war, wartet der Task 250 Millisekunden nach dem ersten Lockvorgang. Dadurch kommt nun AsyncTask \#2 an die Reihe und lockt sein erstes Lock. Nach dem beide Tasks mit ihrem Wartevorgang fertig sind, versuchen sie ihr zweites Lock zu erhalten. Dieser Vorgang wird allerdings nie beendet, denn es handelt sich hierbei um die letzten Logausgaben der beiden Tasks.
+\\
+\\
+Durch den nicht endenden zweiten Lockvorgang kann man auf einen Deadlock schließen. Um in einem Fall mit mehreren Threads festzustellen, welche sich mit welchen Locks gegenseitig blockieren, kann man zusätzlich noch die Referenz des Lock in die Logausgaben miteinbeziehen.
+
+\begin{lstlisting}[float,floatplacement=H,caption=Logausgaben mit Deadlock]
+08-20 14:59:15.413    2330-2348/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock1 locking.
+08-20 14:59:15.413    2330-2348/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock1 locked.
+08-20 14:59:15.513    2330-2349/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock1 locking.
+08-20 14:59:15.513    2330-2349/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock1 locked.
+08-20 14:59:15.673    2330-2348/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #1: Lock2 locking.
+08-20 14:59:15.773    2330-2349/reinhard.bachelorarbeit_debugprojekt I/AsyncTask #2: Lock2 locking.
+\end{lstlisting}
+
+
+\subsection{Traceview}
+Um die Traceview für die Deadlock Erkennung zu Erzeugen wurden die asynchronen Tasks mittels des Buttons \member{Start Task} gestartet. Die Checkbox \member{Enable Deadlock} war aktiv.
+\\
+\\
+In Abbildung 5.3 ist die erzeugte Traceview von AsyncTask \#1 zu sehen. In der zusehenden Traceview ist der Ablauf der Applikation auf einer Zeitachse aufgetragen. Jede Zeile der Abbildung stellt einen Funktionsaufruf dar. Umso mehr Zeilen vorhanden sind umso tiefer verschachtelt ist der aktuelle Aufruf. Der rote Balken am linken Rand der Abbildung markiert das Ende der Wartezeit nach dem ersten Lockvorgang. Man kann im Bild erkennen, dass der Thread nun, mithilfe der \member{lock} Funktion des \member{ReentrantLock}, den Lockvorgang des zweiten Lock beginnt. Es wird mehrmals versucht das Lock mithilfe der \member{tryAcquire} Methode anzufordern. Am Ende gibt der Thread allerdings auf und begibt sich in einen Wartezustand. Die Traceview des zweiten Tasks ist genauso aufgebaut.
+\\
+\\
+Da beide Threads ihr zweites Lock nicht bekommen und sich in einen Wartezustand begeben kann man hier auf einen Deadlock schließen. Der Wartezustand der am Ende welcher Traceview zu sehen ist, ist derselbe der bereits mit der Threadübersicht zu sehen war.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{TraceViewDeadlockAsyncTask1}
+\caption{Traceview eines asynchronen Tasks}
+\label{fig:TraceViewDeadlockAsyncTask1}
+\end{figure}
+
+\subsection{Fazit}
+In einer kleinen Beispielapplikation eignen sich alle drei Herangehensweisen um den Deadlock aufzuspüren. 
+\\
+\\
+In einem größeren Projekt wird sich die Traceview allerdings weniger gut dazu eignen, da es bereits in diesem kleinen Projekt relativ mühsam ist die Stelle des Lockvorgangs zu finden. Meiner Meinung nach würde sich für ein größeres Projekt eine ausführliche Logausgabe, verbunden mit einem Code Review, am Besten eignen um Deadlocks ausfindig zu machen.
+
+
+

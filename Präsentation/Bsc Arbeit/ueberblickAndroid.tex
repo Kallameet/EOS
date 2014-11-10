@@ -1,0 +1,135 @@
+\chapter [Einführung in Android] {Einführung in Android}
+\label{chap:Überblick}
+
+In diesem Kapitel wird zuerst ein Überblick über die Geschichte von Android gegeben. Danach werden die wichtigsten Neuerungen der einzelnen Android Versionen durchgegangen. Abschließend wird die Architektur von Android erklärt.
+
+\section{Geschichte}
+Android wurde im Oktober 2003 von Andy Rubin, Rich Miner, Christ White und Nick Sears gegründet. Das Ziel ihrer Firma war es, Geräte für standortbezogene Dienste zu entwickeln und die Präferenzen ihrer Nutzer zu erkennen. Zu Beginn erfolgte die Entwicklung eines Betriebssystems für Digitalkameras. Diese Geschäftsidee erwies sich jedoch als nicht ertragreich genug, da der Markt dafür zu klein war. Der Fokus von Android wurde nun auf die Entwicklung eines Betriebssystems für Smartphones verschoben. Am 17. August 2005 erfolgte die Übernahme durch Google. Unter Googles Führung wurde das Ziel, ein mobiles Betriebssystem zu entwickeln, weiterverfolgt. Als Teamleiter nach der Übernahme fungierte weiterhin Andy Rubin.\cite{1}
+\\
+\\
+Mit der Veröffentlichung des iPhones am 9. Januar 2007 erhielt Android einen starken Konkurrenten. Der erste Prototyp Android ähnelte von Aufbau und Struktur einem Blackberry, er besaß keinen Touchscreen, sondern eine qwertz-Tastatur. Doch das Konzept des iPhones nahm einen starken Einfluss auf die zukünftige Entwicklung und es erfolgte eine Umstrukturierung des Betriebssystems.\cite{2}
+\\
+\\
+Am 6. November 2007 wurde die Open Handset Alliance gegründet. Dabei handelt es sich um eine Vereinigung die sich für einen offenen Standard für Mobilgeräte einsetzt. Am Gründungstag wurde auch ihr Hauptprodukt Android veröffentlicht. Geleitet wird die OHA von Google. Die Gründungsmitglieder kamen von zahlreichen Sparten der Industrie, wie beispielsweise HTC und Samsung Electronics als Gerätehersteller, Synaptics und Intel Corporation aus der Halbleiterindustrie, Google und eBay als Softwareunternehmen.\cite{3}
+\\
+\\
+Das erste kommerzielle Smartphone am Markt das mit Android ausgestattet wurde, war das HTC Dream, veröffentlicht am 22. Oktober 2008. Im Jahr 2010 startete Google seine eigene Smartphone-Serie mit dem Titel Nexus. Als erstes wurde HTC mit dem Nexus One als Hersteller beauftragt, danach folgten das Nexus 4 und 5 von LG. In der Nexus Serie gibt es allerdings nicht nur Smartphones, sondern auch ein Tablet, das Nexus 7 von Asus. Der große Pluspunkt an dieser Serie ist die Geschwindigkeit mit der die einzelnen Android-Versionen für Nexus-Geräte bereitgestellt werden. Es erfolgen hier keine Modifikationen am Betriebssystem durch den Gerätehersteller, das sorgt für eine sehr kurze Wartezeit auf neue Versionen.\cite{4}\cite{5}
+
+\section{Versionen}
+In Abbildung 2.1 ist der zeitliche Verlauf der verschiedenen Android Versionen zu sehen. Die Abbildung zeigt sehr gut, dass die Verfügbarkeit der neuesten Android Version auf den verschiedenen Mobilgeräten nicht zwangsläufig gegeben ist. Ob und wann eine neue Android Version auf einem Gerät unterstützt wird, hängt vom Gerätehersteller ab. In den nachfolgenden Punkten wird auf einige wichtige Android Versionen und die Features, die sie mit sich bringen, näher eingegangen.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{AndroidVersionHistory}
+\caption{Android Versionsentwicklung.\cite{6}}
+\label{fig:AndroidVersionHistory}
+\end{figure}
+
+\subsection{Nicht kommerzielle Versionen}
+\subsubsection{Alpha}
+Vor dem Beta Release gab es zwei interne Alpha Versionen von Android. Über diese sind allerdings, abgesehen von den Codenamen wie Astro Boy, Bender, R2-D2, nicht viele Informationen verfügbar.\cite{7}
+
+\subsubsection{Beta}
+Die Beta wurde am 5. November 2007 veröffentlicht, einen Tag vor der Gründung der OHA. Das SDK(Software Development Kit) wurde kurz danach am 12. November herausgegeben. Die Beta wurde in mehreren Versionen veröffentlicht, bis sie mit Version 1.0 endete.\cite{8}
+
+\subsection{Kommerzielle Versionen}
+\subsubsection{Android 1.0}
+Am 23. September 2008 wurde die Android Version 1.0 veröffentlicht. Das erste kommerzielle Gerät dafür war das HTC Dream. In Version 1.0 waren bereits der Play Store, Google Maps, GMail, Youtube, Google Sync und ein Webbrowser enthalten.\cite{9}
+
+\subsubsection{Cupcake - 1.5}
+Mit der Veröffentlichung von Cupcake am 27. April 2009 wurde das Schema, die Android Versionen nach Süßigkeiten zu benennen, eingeführt. Wichtige Neuerungen in dieser Version sind der Linux Kernel 2.6.27, die Möglichkeit Videos aufzunehmen und wiederzugeben sowie das automatische Wechseln zwischen Hoch- und Querformat.\cite{10}
+
+\subsubsection{Donut - 1.6}
+Am 15. September 2009 wurde Donut veröffentlicht. Diese Version besitzt einen neuen Kernel mit der Version 2.6.29. Neue Features sind die Sprachausgabe von Texten und die Unterstützung von VPN.\cite{11}
+
+\subsubsection{Eclair - 2.0, 2.1}
+Eclair wurde am 26. Oktober 2009 veröffentlicht. In dieser Version wurden einige neue Features hinzugefügt, wie zum Beispiel die Unterstützung von Microsoft Exchange, eine Kameraerweiterung mit Digitalzoom, Makrofokus und Blitzlicht und Browser Support für HTML 5.\cite{12}
+
+\subsubsection{Froyo - 2.2}
+Mit Froyo wurde am 20. Mai 2010 der Linux Kernel auf Version 2.6.32 aktualisiert. Bei den neuen Features handelt es sich um einen Adobe Flash Support, Tethering und die Möglichkeit einen Wifi Hotspot zu betreiben.\cite{13}
+
+\subsubsection{Gingerbread - 2.3}
+Am 6. Dezember 2012 wurde die Android Version Gingerbread veröffentlicht. Wichtige Neuerungen in dieser Version umfassen NFC Support, eine erweiterte Sensorik Unterstützung und Support der Open Accessory Library.\cite{14}
+
+\subsubsection{Honeycomb - 3}
+Am 22. Februar 2011 wurde die erste Version für Android veröffentlicht, welche ausschließlich für Tablets war. In dieser Version wurde die Benutzeroberfläche angepasst um besser auf die Größe eines Tablets abgestimmt zu sein. Ein bedeutendes neues Feature dieser Version ist der Support von Mehrkernprozessoren.\cite{15}
+
+\subsubsection{Ice Cream Sandwich - 4.0}
+Ice Cream Sandwich wurde am 19. Oktober 2011 veröffentlicht. Diese Version ist die letzte mit Flash Player Support. Die Videoaufnahmequalität wurde auf 1080p erhöht. Mit dem Android Beam wurde eine Möglichkeit hinzugefügt, Daten über NFC zu versenden.\cite{16}
+
+\subsubsection{Jelly Bean - 4.1, 4.2, 4.3}
+Die erste Version von Jelly Bean erschien am 9. Juli 2012. In Jelly Bean wurde der Android Browser mit der mobilen Version von Google Chrome ersetzt. Es wurde Support für Bluetooth 4.0 Low Energy hinzugefügt. Die Oberfläche wurde in dieser Version mithilfe von Dreifachpuffering  und einem globalen vertikalen Synchronisationstiming von 16 Millisekunden optimiert.\cite{17}
+
+\subsubsection{KitKat - 4.4}
+Am 31. Oktober 2013 wurde die zurzeit aktuellste Version von Android mit dem Namen KitKat veröffentlicht. In dieser Version wurde das Design der Oberfläche aktualisiert und der Speicherverbrauch optimiert. Es werden in dieser Version nur noch mindestens 512MB Ram benötigt.\cite{18}
+
+
+\section{Architektur}
+Die Architektur von Android baut auf mehreren Schichten auf, die in den nachfolgenden Unterpunkten näher erläutert werden. In Abbildung 2.2 kann man den grundlegenden Aufbau, unten beginnend beim Linux Kernel mit der Hardware Anbindung und oben endend mit dem Application Layer für Benutzerinteraktionen, gut erkennen.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{AndroidSystemArchitecture}
+\caption{Android System Architektur.\cite{19}}
+\label{fig:AndroidSystemArchitecture}
+\end{figure}
+
+\subsection{Linux Kernel}
+Der Linux Kernel ist für die Hardwareanbindung und für grundlegende Funktionen eines Betriebssystems zuständig. Die Hardwareanbindung erfolgt mittels Treibern. Zu den Verwaltungsaufgaben des Kernels gehören die Speicherverwaltung, die Prozessverwaltung und die Sicherheitsverwaltung. Bei dem Kernel handelt es sich nicht um eine Standard Distribution, sondern um eine von Google modifizierte Variante. Es werden allerdings verschiedene Funktionen in den allgemeinen Kernel aufgenommen, wie zum Beispiel das Wakelock und die Autosleep Funktion.\cite{19}
+
+
+\subsection{Android Runtime}
+In Android bekommt jeder Prozess seine eigene virtuelle Maschine, dabei handelt es sich um eine Dalvik VM. Sie wurde von Dan Bornstein entwickelt und ähnelt teilweise einer Java VM. Ein bedeutender Unterschied ist allerdings, dass eine Java VM stapelbasiert und eine Dalvik VM registerbasiert arbeitet. Diese registerbasierte Arbeitsweise lehnt sich an moderne Prozessorarchitekturen an. Sie verarbeitet Registermaschinencode, dadurch wird die Dalivk VM schneller als die Java VM und ist ressourcenschonender.\cite{20}
+\\
+\\
+Ein weiterer bedeutender Unterschied liegt darin, dass eine Dalvik VM klassische Java Bibliotheken nicht unterstützt, zum Beispiel AWT und Swing. Es werden eigene Bibliotheken verwendet, die Apache Harmony als Grundlage verwenden.\cite{20}
+\\
+\\
+Ein wichtiger Bestandteil der SDK ist das Tool \member{dx}. Es sorgt dafür, dass Java Binärdaten in Dalvik Executables umgewandelt werden. Das heißt es wandelt \member{.class} Dateien in \member{.dex} Dateien um. Bei dieser Umwandlung können auch mehrere \member{.class} Dateien zu einer \member{.dex} Datei zusammengefasst werden, um damit eine Optimierung des Speicherbedarfs zu erreichen.\cite{19}\cite{20}
+
+
+\subsection{Libraries}
+Die Bibliotheken von Android basieren auf der Bionic \member{libc}. Dabei handelt es sich um eine von Google entwickelte Derivation der Berkeley Software Distribution. Bionic ist kleiner als die GNU-C-Bibliothek(\member{glibc}) und auch wie die \member{uClibc}. Neben der geringeren Größe ist sie auch für Prozessoren mit kleiner Taktrate optimiert, was bei Smartphones meistens der Fall ist.\cite{19}
+\\
+\\
+C und C++ Bibliotheken können mithilfe des Android Native Development Kit(NDK) eingebunden werden. Das ermöglicht einen späteren Zugriff des geschriebenen Java Codes auf diese Klassen. Gute Beispiele dafür sind OpenGL|ES, SQLite und der Surface Manager.\cite{19}
+
+
+\subsection{Application Framework}
+Das Application Framework beinhaltet die Klassen des Android SDK und stellt diese zur Verfügung. Es baut auf den darunterliegenden Libraries auf und beinhaltet verschiedene Manager, die die einzelnen Funktionen einer Applikation verwalten können. Das Application Framework sorgt weiters dafür, dass die Applikationen zwischen verschiedenen Endgeräten kompatibel sind. Dafür werden verschiedene Konfigurationen zur Verfügung gestellt und ebenso die Möglichkeit eine Installation zu blockieren, falls ein benötigtes Feature auf dem Smartphone nicht vorhanden ist. In den folgenden Punkten werden einige wichtige Manager des Application Frameworks näher erklärt.\cite{19}
+
+\subsubsection{Activity Manager}
+Der Activity Manager dient zum Verwalten des Lebenszyklus eines Activities. In Abbildung 2.3 ist der Lebenszyklus mit den verschiedenen Zuständen des Activities dargestellt. Bei einem Zustandswechsel werden die jeweiligen Funktionen aufgerufen, die der Entwickler in seinem selbst programmierten Activity überschreiben kann. 
+\\
+\\
+Ein Activity stellt die Darstellungsschicht einer Android Applikation dar. Es handelt sich dabei um ein Fenster mit dem der Benutzer interagieren kann.\cite{21}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{ActivityLifecycle}
+\caption{Activity Lebenszyklus.\cite{22}}
+\label{fig:ActivityLifecycle}
+\end{figure}
+
+\subsubsection{Window Manager}
+Mithilfe des Window Manager werden die verschiedenen Displays verwaltet, dies ermöglicht es für verschiedene Geräte einzelne Display Einstellungen vorzunehmen. Der Window Manager ist auch dazu in der Lage eine andere Displaygröße als die des physikalischen Displays zu emulieren.\cite{23}\cite{24}
+
+
+\subsubsection{Content Provider}
+Der Content Provider ist für die Datenzugriffe auf das System verantwortlich. Die Datenverwaltung erfolgt global und für alle Applikationen. Für den Zugriff auf verschiedene Datentypen werden verschiedene Provider bereitgestellt. Für die Kalenderdaten beispielsweise gibt es den \member{Calender-Provider}, für Kontaktdaten ist der \member{Contacts-Provider} zuständig und für Wörter, die der Benutzer manuell in seinem Wörterbuch abgelegt hat, ist der \member{UserDictio\-nary-Provider} verantwortlich. Um die Daten von einem Provider auszulesen wird der \member{Content-Resolver} verwendet.\cite{25}
+
+
+\subsubsection{View System}
+Das View System sorgt für die Verwaltung der GUI(Graphical User Interface) Elemente. Diese einzelnen Views werden in einer Baumstruktur abgelegt. Die Views beinhalten GUI Elemente wie zum Beispiel Buttons, Listen, Textboxen und Labels. Auf diese Elemente kann mittels Java Code zugegriffen werden. Zusätzlich zu dieser Zugriffsmethode wird auch der Entwurf mittels XML unterstützt. Dadurch können mit einfachen Mitteln Layouts erstellt und gut in andere Projekte integriert werden.\cite{26}
+
+
+\subsubsection{Package Manager}
+Die Aufgabe des Package Manager ist das Verwalten der installierten Pakete und Applikationen. Er kann verschiedene Daten dieser installierten Anwendungen auslesen und über seine API zur Verfügung stellen. Dazu gehören die Metadaten der Pakete wie zum Beispiel der Hersteller, die benötigten Features und die notwendigen Berechtigungen. Mit dem Package Manager kann auch ausgelesen werden, welche Pakete bereits installiert sind.\cite{27}
+
+
+\subsubsection{Resource Manager}
+Der Resource Manager dient zum Verwalten der Ressourcen bei denen es sich nicht um Sourcecode handelt. Darunter fallen zum Beispiel Bilder, Texte und Layouts. Diese Dateien werden im \member{res} Ordner abgelegt. Es ist auch möglich verschiedene Ressourcen für mehrere Lokalisierungen zu verwalten.\cite{28}
+
+
+\subsection{Application}
+Applikationen stellen die Schnitstelle zwischen dem Benutzer und Android dar. Sie verwenden Manager und Klassen die durch das Application Framework zur Verfügung gestellt werden. Das Speicherformat der Applikationen ist \member{.apk}. Der Benutzer kann diese Dateien von einem Appstore herunterladen und automatisch, oder auch direkt über die \member{.apk} Datei, installieren. Es können alle Applikationen von Android ausgetauscht werden, allerdings gibt es einige Standardinstallationen wie zum Beispiel die Telefon App.\cite{29}

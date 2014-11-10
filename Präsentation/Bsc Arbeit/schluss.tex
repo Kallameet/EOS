@@ -1,0 +1,13 @@
+\chapter[Schlussbemerkungen] {Schlussbemerkungen}       
+\label{cha:schluss}
+
+In dieser Arbeit wurden die Möglichkeiten der Entwicklung und des Debuggens von multithreaded Android Applikationen in Android Studio analysiert. Zusätzlich dazu wurden zwei Arten multithreaded Applikationen in Android zu realisieren miteinander im Hinblick auf Performance verglichen. In diesem Teil der Arbeit wird noch einmal ein Resümee der vorherigen Kapitel gezogen.
+\\
+\\
+Android Studio bietet eine Vielzahl an Optionen zum Debuggen von multithreaded Applikationen. Wie in Kapitel \ref{cha:debugging} beschrieben konnte mit allen Möglichkeiten, jeweils auf sich gestellt der Deadlock gefunden werden. Alleine sind die einzelnen Funktionen für größere Projekte allerdings nicht sehr geeignet. Kombiniert man jedoch mehrere dieser Möglichkeiten, zeigt sich Android Studio als mächtiges Tool und erfüllt seinen Zweck sehr gut.
+\\
+\\
+Die in Kapitel \ref{cha:performance} untersuchten Multithreadingmöglichkeiten erfüllten alle ihren Zweck und zeigten in verschiedenen Bereichen Stärken und Schwächen. Die Java Threads waren in der Gesamtausführungszeit am schnellsten. Die durchschnittliche Ausführungszeit stieg allerdings bei größeren Problemgrößen, aufgrund des fehlenden Threadpools stark an. Die parallel ausgeführten asynchronen Tasks waren alles im allem am besten. Dadurch das die asynchronen Tasks eigens für Android entwickelt wurden war es mit ihnen auch bedeutend einfacher Daten zurück in den Main-Thread zu schreiben.
+\\
+\\
+Im Laufe der Arbeit konnte ich mir einen guten Überblick von Android verschaffen und meine Kenntnisse im Bereich der parallelen Programmierung vertiefen. Während der praktischen Teile der Arbeit kam es immer wieder zu kleinen Problemen mit Android Studio. Diese sind vermutlich darauf zurückzuführen, dass es sich noch in der Beta befindet. Letzten Endes konnten die Probleme aber behoben werden und stellten keine größeren Hürden dar.

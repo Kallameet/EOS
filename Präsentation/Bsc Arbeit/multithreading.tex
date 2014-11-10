@@ -1,0 +1,103 @@
+\chapter [Grundbegriffe der parallelen Programmierung] {Grundbegriffe der parallelen Programmierung}
+\label{chap:paralleleProgrammierung}
+
+In diesem Kapitel werden einige Grundbegriffe der parallelen Programmierung, welche zum Verständnis der restlichen Arbeit notwendig sind, näher erläutert. Am Ende des Kapitel wird auf die Eigenheiten der parallelen Programmierung in Android eingegangen.
+
+\section{Grundbegriffe}
+\subsection{Thread}
+Bei einem Thread handelt es sich um einen Teil eines Prozesses. Der Thread ist ein Ausführungsstrang, in dem sequentiell Anweisungen abgearbeitet werden. Ein Prozess kann mehrere Threads besitzen. Diese werden dann parallel zueinander abgearbeitet. Zur Bestimmung welcher Thread wann bearbeitet wird, ist es möglich ihnen verschiedene Prioritäten zuzuweisen. Ein Vorteil von Threads gegenüber mehreren Prozessen ist, dass ein Kontextwechsel, der Vorgang bei dem von einem Thread bzw. Prozess zu einem anderen gewechselt wird, bei Threads performanter ist.
+
+\subsection{Multithreading}
+Multithreading beschreibt eine Art des Softwareentwurfs bei dem das Programm in verschiedene Aufgabenbereiche aufgeteilt wird, welche parallel zueinander ausgeführt werden. Diese parallele Ausführung der unterschiedlichen Aufgaben wird von Threads erledigt. Dabei ist das Betriebssystem dafür verantwortlich, wann und wie lange ein Thread Rechenzeit in Anspruch nehmen darf. Der Teil des Betriebssystems, der diese Aufgabe erledigt wird Scheduler genannt. Die Methode, anhand der der Scheduler bestimmt, welcher Thread an die Reihe kommt, wird der Scheduling-Algorithmus genannt. Dieser kann zum Beispiel auf den Prioritäten der Threads basieren.
+\\
+\\
+Ein Beispiel für einen Fall in dem Multithreading vorteilhaft zur Anwendung gebracht werden kann, ist ein Benutzerinterface. Damit der Hauptthread, der für die Oberfläche zuständig ist, immer interaktiv bleibt und die Benutzereingaben verarbeiten kann, können keine langen Operationen in einem Thread ausgeführt werden. Um dennoch längere Aufgaben durchführen zu können, wird ein zweiter Thread benötigt, der diese parallel zum Hauptthread ausführt.
+\\
+\\
+Ein weiteres nützliches Anwendungsgebiet für Multithreading sind aufwändige Berechnungen. Lässt sich das Problem gut parallelisieren, wie zum Beispiel Matrixberechnungen, können mehrere Threads die Ausführungszeit der Berechnung drastisch verringern. Auf einem Vierkernprozessor kann man so mit vier Threads die Berechnungszeit nahezu auf ein Viertel verringern. Würde man die selbe Aufgabe am selben Prozessor mit nur einem Thread ausführen, wäre nur ein Kern aktiv und die anderen drei Kerne würden nichts zur Berechnung beitragen.
+
+
+\section{Möglichkeiten zur Synchronisation}
+\subsection{Lock}
+Bei einem Lock handelt es sich um einen Mechanismus zum Sichern einer Ressource. Bei der Ressource kann es sich zum Beispiel um Dateien oder Objekte handeln. Es wird sichergestellt, dass zu einem bestimmten Zeitpunkt nur ein Thread Zugriff auf die gesicherte Ressource hat.\cite{30}
+\\
+\\
+Ein möglicher Ablauf des Lockingvorgangs ist, dass zum Beispiel Thread A die Ressource für sich in Anspruch nimmt. Währenddessen versucht nun Thread B dieselbe Ressource zu bekommen. Thread B wird nun solange blockiert bis Thread A die Ressource freigibt. Nach der Freigabe kann sich Thread B die Ressource sichern und verwenden.
+\\
+\\
+Locks können genauer kategorisiert werden wie zum Beispiel das \member{ReentrantLock}. Hierbei handelt es sich um ein spezielles Lock das für Rekursionen vorgesehen ist. Hat Thread A die Ressource gelockt und es kommt in diesem Thread zu einer Rekursion, in der der Thread das \member{ReentrantLock} erneut anfordert, so stellt das kein Problem dar, weil er es bereits besitzt. Bei einem Lock würde die Rekursion nicht erkannt werden, und der Thread würde blockieren bis das Lock freigegeben ist.\cite{31}
+\\
+\\
+Ein anderes Lock ist das \member{ReadWriteLock}. Diese Art eignet sich besonders gut für Aufgaben bei denen viele Lesezugriffe vorhanden sind, aber sehr wenige Schreibzugriffe. Mehrere Threads können parallel zueinander einen Lesezugriff anfordern und die Ressource lesen. Wird ein Schreibzugriff angefordert, bekommt nur der Thread der diesen angefordert hat Zugriff auf die Ressource und kann sie bearbeiten. Ob Lese- oder Schreibzugriff zuerst abgearbeitet wird, hängt von der Implementierung des Locks ab. Normalerweise wird aber der Schreibzugriff bevorzugt, da es meistens weniger Zugriffe dieser Art gibt und sie die Aktualität der Ressource beeinflussen.\cite{32}
+
+\subsection{Semaphore}
+Eine Semaphore ist genauso wie das Lock für die Sicherung von Ressourcen verantwortlich. Der Unterschied zum Lock ist, dass bei einer Semaphore mehr als ein Thread auf die Ressource zugreifen kann. Die maximale Anzahl der parallelen Zugriffe wird bei der Initialisierung der Semaphore bestimmt.\cite{33}
+\\
+\\
+Ein Anwendungsbeispiel ist ein Datenbankzugriff. Angenommen die Datenbank erlaubt X parallele Zugriffe, so können X Threads die Semaphore in Anspruch nehmen. Kommt nun der Thread Nummer X+1 und will die Semaphore beanspruchen, muss er warten bis einer der anderen Threads mit dem Datenbankzugriff fertig ist und die Semaphore freigibt.
+
+
+\section{Gefahren der parallelen Programmierung}
+\subsection{Deadlock}
+Bei der Verwendung von Threads kann es zu Problemen kommen die bei einer single-threaded Anwendung nicht vorkommen können. Ein solches Problem ist der Deadlock. Bei einem Deadlock handelt es sich um eine Situation in der zwei Threads auf den jeweils anderen warten und nicht mehr fortgesetzt werden. Entstehen kann ein Deadlock zum Beispiel bei der falschen Verwendung von Locking Mechanismen.\cite{34}
+\\
+\\
+Ein Beispiel dafür ist die Anforderung von Ressourcen wie in Abbildung 3.1 zu sehen ist. Thread A lockt Ressource A für sich, Thread B blockiert Ressource B. Thread A versucht nun Ressource B zu bekommen und Thread B versucht dasselbe mit Ressource A. In dieser Situation warten beide Threads auf die Ressource des jeweils anderen Threads und es kommt zum Stillstand.
+\\
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{Deadlock}
+\caption{Deadlock mit zwei Ressourcen.}
+\label{fig:Deadlock}
+\end{figure}
+\\
+Ein anderer Auslöser ist das Auftreten von Exceptions. Wenn Thread A die Ressource A lockt und im weiteren Ablauf des Thread tritt eine Exception auf, dann wird die Ressource nie wieder freigegeben falls die Exception nicht abgefangen wird und das Lock im Catch-Zweig freigeben wird.
+\\
+\\
+Ein Ansatz zur Vermeidung von Deadlocks ist die Verwendung einer Lockinghierarchie. Das heißt Lock A wird immer vor Lock B angefordert. Durch diese Art des Lockings kann es nie zu dem im ersten Beispiel beschriebenen Fall kommen. Eine weitere Variante zur Verhinderung des Deadlocks im ersten Beispiel ist die Verwendung eines Timeouts beim Lockingversuch. Ist das Timeout erreicht, werden alle bereits angeforderten Locks freigegeben und es wird eine bestimmte Zeit gewartet. Durch das Warten haben die anderen Threads nun die Möglichkeit sich die zuvor gesperrte Ressource zu sichern.
+\\
+\\
+Um den Deadlock des zweiten Beispiels zu verhindern ist es empfehlenswert den Locking-Aufruf mit einem Try/Catch Block zu folgen. So können im Catch-Zweig die angeforderten Locks wieder freigegeben werden.
+
+\subsection{Race Condition}
+Bei einer Race Condition handelt es sich um eine Situation, in der das Ergebnis von Operationen durch die Reihenfolge ihrer Ausführung verändert werden kann. Diese Situation tritt meist durch mangelnde Synchronisation ein.\cite{34}
+\\
+\\
+Ein Beispiel für eine Race Condition ist das Erstellen eines Logeintrages wie in Abbildung 3.2 zu sehen ist. Zwei Threads wollen zur selben Zeit einen Eintrag zur Datei hinzufügen. Thread A liest nun die Datei und ändert diese. Bevor die Datei gespeichert werden kann, liest jedoch auch Thread B die Datei, schreibt seinen neuen Logeintrag hinein und speichert die Datei wieder. Wenn nun Thread A seinen Logvorgang fortsetzt und die Datei speichert, wird der Logeintrag von Thread B überschrieben und geht verloren.
+\\
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{RaceCondition}
+\caption{Race Condition beim Erstellen eines Logeintrages.}
+\label{fig:RaceCondition}
+\end{figure}
+\\
+Ist eine Race Condition einmal vorhanden, kann es schwer sein diese zu finden, denn durch das Debuggen oder durch zusätzliche Ausgaben wird das zeitliche Verhalten der Software beeinflusst und die Race Condition kann verschwinden. Vermieden werden können Race Conditions mit der Anwendung von Synchronisationsmechanismen. Im oben genannten Beispiel könnte man die Log-Datei mit einem Lock sichern und damit die Race Condition beheben. Hierbei gilt es allerdings darauf zu achten, dass man mit der neu eingeführten Synchronisation keine Deadlocks erstellt.
+
+
+\section{Multithreading in Android}
+In der Android Architektur hat eine Applikation einen Hauptthread, dieser wird User Interface Thread (UI-Thread) genannt. Dieser Thread ist für Benutzerinteraktionen wie verschiedene Touch Events zuständig. Zudem ist er auch noch alleinig für die Anzeige der Benutzeroberfläche verantwortlich, andere Threads dürfen diese nicht verändern. Der UI-Thread darf nicht blockiert werden, denn sonst meldet Android dem Benutzer, dass die Applikation nicht mehr reagiert und gibt ihm die Möglichkeit diese sofort zu beenden.\cite{35}
+\\
+\\
+Für lange Aufgaben ist es empfehlenswert diese in einem Thread auszuführen, einem sogenannten Worker Thread. Hierfür bietet Android zwei Möglichkeiten an. Bei der Ersten handelt es sich um Java Threads. Mit dieser Art von Thread ist es allerdings relativ schwer Daten zur Aktualisierung der Benutzeroberfläche an den UI-Thread zu senden. Die zweite Option sind asynchrone Tasks. Diese Variante bietet Funktionen an, die zur Aktualisierung der Benutzeroberfläche gedacht sind und nur noch überschrieben werden müssen.\cite{35}
+
+\subsection{Asynchrone Tasks}
+Der große Vorteil von asynchronen Tasks gegenüber normalen Threads ist wie oben bereits erwähnt die einfache Aktualisierung der Benutzeroberfläche. Um einen solchen Task zu erstellen, muss eine eigene Klasse implementiert werden die von \member{AsyncTask<Params, Progress, Result>} ableitet. Von diesem Task wird im UI-Thread ein Objekt erzeugt das dann mit der \member{execute} Methode ausgeführt werden kann. Zu beachten ist dabei, dass jedes Objekt nur einmal ausgeführt werden kann.\cite{35}\cite{36}
+\\
+\\
+Die \member{AsyncTask} Klasse stellt viele Methoden bereit die überschrieben werden können, diese werden im nachfolgenden Teil näher beschrieben.
+
+\subsubsection{protected void onPreExecute()}
+Diese Methode wird als erstes ausgeführt und läuft im UI-Thread. Sie kann unter anderem dazu verwendet werden einen Status-/Ladebalken für den Task anzuzeigen.\cite{36}
+
+\subsubsection{protected abstract Result doInBackground(Params... params)}
+In dieser Methode wird die eigentliche Arbeit des Tasks erledigt. Die Parameter werden aus dem UI-Thread übergeben. Ausgeführt wird die Methode im Worker-Thread. Es ist möglich mithilfe der \member{publishProgress} Methode Statusupdates an den UI-Thread zu senden. Ist die Methode fertig, wird mittels einer return Anweisung das Ergebnis zurück geliefert.\cite{36}
+
+\subsubsection{protected void onProgressUpdate(Progress... values)}
+Ausgeführt wird diese Methode im UI-Thread. Sie erhält ihre Daten mittels eines Aufrufes von \member{publishProgress}. Genutzt werden kann diese Methode um den Benutzer über den aktuellen Status des Tasks im Laufe zu halten, beispielsweise mithilfe eines Ladebalkens.\cite{36}
+
+\subsubsection{protected void onPostExecute(Result result)}
+Diese Methode wird nach \member{doInBackground} ausgeführt und läuft im UI-Thread. Sie erhält die Ergebnisse des zuvor ausführten Tasks und kann diese dem UI-Thread zur weiteren Verarbeitung zur Verfügung stellen. Im Falle eines Abbruches des Tasks wird diese Methode nicht aufgerufen.\cite{36}
+
+\subsubsection{protected void onCancelled(Result result)}
+Im Falle eines abgebrochenen Tasks wird diese Methode ausgeführt. Sie läuft im UI-Thread und erhält das Ergebnis der \member{doInBackground} Methode. Um einen Task abzubrechen muss die \member{cancel} Methode vom UI-Thread auf das Task Objekt aufgerufen werden. Nach diesem Aufruf kann innerhalb des Worker-Thread mithilfe der \member{isCancelled} Methode der aktuelle Zustand des Tasks überprüft werden.\cite{36}

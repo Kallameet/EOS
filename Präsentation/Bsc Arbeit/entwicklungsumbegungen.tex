@@ -1,0 +1,140 @@
+\chapter [Verwendete Entwicklungsumgebung - Android Studio] {Verwendete Entwicklungsumgebung - Android Studio}
+\label{chap:ide}
+
+In diesem Kapitel wird ein Überblick über die Entwicklungsumgebung, die für die praktischen Teile der Arbeit verwendete wurde, gegeben. 
+
+\section{Allgemeines}
+Für die praktischen Programmierteile dieser Arbeit wurde Android Studio verwendet. Es handelt sich dabei um eine von Google entwickelte Entwicklungsumgebung(IDE) für Android. Sie basiert auf der Entwicklungsumgebung IntelliJ IDEA von JetBrains. Der Aufbau der IDE ist in Abbildung 4.1 zu sehen. Android Studio ist als Nachfolger für die verschiedenen Plugins, die derzeit für die Entwicklung mit Android zur Verfügung stehen, geplant. Zurzeit befindet es sich noch in der Beta-Phase. Es besitzt aber bereits mehr Funktionen, als das am weitesten verbreitete Plugin, das ADT Plugin für Eclipse. Ein bedeutender Unterschied zwischen ihnen ist ihr Buildprozess. Android Studio verwendet dafür Gradle während Eclipse Ant benutzt. Nachfolgend eine kurze Erläuterung der beiden Systeme.\cite{37}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{AndroidStudio}
+\caption{Android Studio}
+\label{fig:AndroidStudio}
+\end{figure}
+
+\subsection{Ant}
+Bei Ant handelt es sich um ein Build Tool das Teil der Apache Software Foundation ist. Der Haupteinsatzbereich ist das Bauen von Java Anwendungen. Für den Buildprozess werden Buildskripte in einem XML Format verwendet.\cite{38}
+
+\subsection{Gradle}
+Bei Gradle handelt es sich ebenfalls um ein Build Tool. Hergestellt wurde es von Gradleware. Buildskripte in Gradle verwenden die Domain Specific Language (DLS). Diese Sprache basiert auf Groovy.\cite{39}
+
+
+\section{Android Debug Bridge - adb}
+Die Android Debug Bridge ist Teil der Tools von Android Studio und dient zur Kommunikation zwischen der Entwicklermaschine und dem Emulator oder Mobilgerät während des Debuggens. Sie setzt sich aus den folgenden Komponenten zusammen.\cite{40}
+
+\subsection{Client}
+Der Client läuft auf der Entwicklermaschine und sendet die Befehle an den Server. Ist noch kein Server gestartet, dann startet der Client einen Server. Das Erzeugen und Senden der Befehle kann auf zwei Varianten passieren. Vorrangig wird der adb Client vom DDMS(siehe \ref{sec:ddms}) erzeugt. Alternativ kann man ihn auch manuell über die Konsole erzeugen und damit Befehle an den Server senden.\cite{40}
+
+\subsection{Server}
+Die zweite Komponente der Android Debug Bridge ist der Server. Er wird ebenfalls auf der Entwicklermaschine ausgeführt. Der Server registriert nach seinem Start alle Daemons und ermöglicht somit eine Kommunikation zwischen dem Client und den Daemons.\cite{40}
+
+\subsection{Daemon}
+Der Daemon läuft am Mobilgerät oder am Emulator als Hintergrundprozess. Er wartet auf Befehle vom Server und verarbeitet diese dementsprechend.\cite{40}
+
+
+\section{Dalvik Debug Monitor Server - DDMS}
+\label{sec:ddms}
+Der Dalvik Debug Monitor Server ist das Debug Tool von Android Studio. Er stellt verschiedene Funktionen, wie zum Beispiel eine Performance Analyse von Methoden bereit. Die wichtigsten Funktionen werden im weiteren Verlauf näher beschrieben.
+\\
+\\
+Der DDMS macht sich die Eigenschaft zunutze, dass jede Android Applikation über eine eigene virtuelle Maschine verfügt und diese über einen Port zu erreichen ist. Er erstellt einen adb Client und erfährt vom adb Server sobald eine Applikation am Device verfügbar ist. Nun fordert er die Prozess ID der Applikation an, mit dieser kann diese nun gezielt angesprochen und debuggt werden.\cite{41}
+
+\subsection{Speicherüberwachung}
+Der DDMS stellt zwei Möglichkeiten der Speicherüberwachung zur Verfügung.
+\\
+\\
+Mit der ersten Funktion ist es möglich den Status des Heaps auszulesen. Der aktuelle Speicherverbrauch kann jederzeit während des Debuggens aktualisiert werden. Es besteht auch die Möglichkeit den Garbage Collector manuell zu aktivieren. Sobald dieser abgearbeitet ist wird eine Liste von allen betroffenen Elementen und ihr angeforderter Speicher bereitgestellt.\cite{41}
+\\
+\\
+Die zweite Funktion dient zur Echtzeitüberwachung von Speicheranforderungen. Mit dieser Funktion kann man beobachten, welche Klassen und Threads Objekte im Speicher anlegen. In der Auflistung steht beschrieben, wie groß die angelegten Elemente sind, welcher Thread sie erzeugt hat und in welcher Methode sie angelegt wurden.\cite{41}
+
+\subsection{Method Profiling - Traceview}
+Um das Method Profiling zu aktivieren gibt es zwei Varianten.
+\\
+\\
+Einerseits kann man es im DDMS aktivieren. Dabei wird der Code nicht verändert. Allerdings kann man dadurch keine bestimmten Stellen im Code analysieren.\cite{41}
+\\
+\\
+Alternativ dazu, kann man das Method Profiling im Code mithilfe der \member{Debug} Klasse aktivieren. Dazu werden die beiden Methoden \member{startMethodTracing} und \member{stopMethodTracing} verwendet. Mit diesen Methoden wird das Profiling gestartet beziehungsweise gestoppt.\cite{42}
+\\
+\\
+Im Traceview kann das Ergebnis angezeigt werden. Dabei stehen zwei Ansichten zur Auswahl, das Timeline Panel und das Profile Panel.
+
+\subsubsection{Timeline Panel}
+Im Timeline Panel wird der Ablauf des analysierten Teils, wie in Abbildung 4.2 im oberen Teil zu sehen, auf eine Achse aufgetragen. Einzelne Threads können mithilfe eines Dropdowns am oberen Rand ausgewählt werden. Die verschiedenen Methoden werden farblich markiert und jede besitzt eine eigene Zeile. Diese Ansicht eignet sich somit gut um festzustellen zu können, wo die Applikation plötzlich lange braucht, zum Beispiel bei einem Deadlock.\cite{42}
+
+\subsubsection{Profile Panel}
+In dieser Ansicht wird der Ablauf in einer Baumstruktur dargestellt, wie im unteren Bereich von Abbildung 4.2 zu sehen ist. Jeder Thread stellt hierbei ein Wurzelelement dar. Ihm wird für jede aufgerufene Methode ein Knoten hinzugefügt. Für jedes Element des Baums wird angezeigt, wie viel Zeit in diesem Element verbracht und wie oft die Methode aufgerufen wurde. Die Zeit wird in zwei verschiedenen Werten angezeigt, der inklusiven und exklusiven Zeit.\cite{42}
+\\
+\\
+Die inklusive Zeit gibt an wie lange die Methode gebraucht hat, inklusive aller Submethoden die sie aufgerufen hat.
+\\
+\\
+Die exklusive Zeit gibt an wie lange die Methode selbst gebraucht hat. Aufgerufene Submethoden werden hier nicht miteinbezogen.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{TraceViewOverview}
+\caption{Traceview Überblick}
+\label{fig:TraceViewOverview}
+\end{figure}
+
+\subsection{Systemlogs - logcat}
+Das Logsystem des DDMS wird logcat genannt. Die Logausgaben können in Echtzeit mitverfolgt werden. Bei Fehlern im Emulator werden automatisch Ausgaben erzeugt. Es ist aber auch möglich selbst auf dieses Logsystem zuzugreifen. Dies geschieht über die \member{Log} Klasse. Sie verfügt über mehrere Methoden für verschiedene Fehlergrade. Einige wichtige Ausgabetypen werden nachfolgend kurz erklärt.\cite{43}
+
+\subsubsection{Log.i}
+Hierbei handelt es sich um eine Information.\cite{43}
+
+\subsubsection{Log.e}
+Bei diesem Typ von Logausgabe handelt es sich um einen Fehler.\cite{43}
+
+\subsubsection{Log.wtf}
+Bei dieser Logausgabe handelt es sich um einen kritischen Fehler. Je nach Konfiguration der Applikation kann es sein, dass sie bei dieser Art von Logausgabe mit einen Fehler Dialog beendet wird.\cite{43}
+
+
+\section{Android Virtual Device - AVD}
+Das Android Virtual Device ist die Konfiguration für den Emulator. In dieser Konfiguration werden die Hardware und Software Eigenschaften des Emulators beschrieben. In Abbildung 4.3 ist der Konfigurationsdialog zu sehen, nachfolgend werden wichtigsten Einstellungsmöglichkeiten erklärt.\cite{44}\cite{45}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{AVD}
+\caption{Android Virtual Device Konfiguration}
+\label{fig:AVD}
+\end{figure}
+
+\subsection{Android Version}
+Mit dieser Eigenschaft wird die simulierte Android Version ausgewählt. Auf der simulierten Version sind bereits einige Basis Applikationen wie zum Beispiel der Browser installiert. Bei der Auswahl der Version muss darauf geachtet werden, dass sie größer gleich der Mindestversion, der zu testenden Applikation ist.\cite{45}
+
+\subsection{CPU}
+Hier kann ausgewählt werden welche Prozessor Architektur verwendet werden soll.\cite{45}
+
+\subsection{SD Karte}
+Es ist möglich eine SD Karte für die Konfiguration auszuwählen. Die SD Karte wird als Datei auf der Entwicklermaschine abgespeichert. In ihr können die Konfigurationen des Emulators und verschiedene Applikationsdateien abgespeichert werden.\cite{45}
+
+\subsection{Snapshot}
+Diese Option beschleunigt das erneute Starten des Emulators. Sobald der Emulator das erste mal beendet wird, wird ein Snapshot vom Zustand des Emulators erstellt. Beim nächsten Start wird dieser Snapshot geladen, was in einem wesentlich schnelleren Start resultiert. Allerdings dauert das Beenden des Emulators länger, da der Snapshot erstellt werden muss.\cite{45}
+
+\subsection{Hardwareoptionen}
+Mit den Hardwareoptionen kann die simulierte Hardware des Emulators konfiguriert werden. Zur Verfügung stehen eine Vielzahl an Einstellungsmöglichkeiten wie zum Beispiel die Speichergröße, die Verfügbarkeit von Touchscreen, GPS und Kamera und die Kamera Auflösung.\cite{45}
+
+
+\section{Emulator}
+In Abbildung 4.4 ist der gestartete Emulator zu sehen. Bei diesem handelt es sich um ein simuliertes Mobilgerät das anhand eines AVD erstellt wird. Beim Start des Simulator besteht die Möglichkeit von einem Snapshot zu starten, falls diese Option im AVD aktiviert ist. Es besteht jedoch noch immer die Option den Emulator komplett neu zu starten.\cite{46}
+\\
+\\
+Der Emulator unterstützt verschiedene Testfunktionen. Zum Beispiel lassen sich Anrufe, SMS und Tastendrücke simulieren. Für Netzwerktests wird auch die Möglichkeit angeboten Latenz und Paketverlust zu simulieren.\cite{46}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{Emulator}
+\caption{Nexus 4 Emulator}
+\label{fig:Emulator}
+\end{figure}
+
+
+\section{Hardware Anbindung}
+Android Studio bietet die Funktion an Applikationen auf einem physischen Gerät zu Debuggen. Dazu müssen auf dem Mobilgerät die Entwickleroptionen aktiviert sein. Startet man den Debug Vorgang in Android Studio wird die Applikation automatisch auf dem Gerät installiert.\cite{47}
+\\
+\\
+Tests auf einem physischen Gerät bringen einige Vorteile gegenüber einen Emulator mit sich. Der Beschleunigungssensor lässt sich im Emulator zum Beispiel gar nicht testen. Ein weiterer Vorteil ist die Abschätzung der Performance der Applikation. Im Emulator ist die Performance stark von der Entwicklermaschine abhängig und allgemein schlechter und lässt sich somit kaum abschätzen.\cite{47}

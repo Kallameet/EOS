@@ -1,0 +1,116 @@
+\chapter[Performancevergleich zwischen Java Threads und asynchronen Tasks] {Performancevergleich zwischen Java Threads und asynchronen Tasks}       
+\label{cha:performance}
+
+In diesem Kapitel wird die Performance von Java Threads und asynchronen Tasks, anhand einer Beispielapplikation in Android, verglichen. Als Testgeräte werden dazu zwei Mobilgeräte verwendet, das Nexus 4 und das Samsung Galaxy S4. Die Beispielapplikation wurde mit der Android Version 4.4.2 entwickelt.
+
+\section{Verwendete Applikation}
+\subsection{Oberfläche}
+Die Oberfläche der verwendeten Applikation ist in Abbildung 6.1 zu sehen. Sie besteht aus drei Buttons, zwei Eingabefeldern und zwei Texten zum Anzeigen von Ergebnissen.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{PerformanceAppUI}
+\caption{Oberfläche der Applikation}
+\label{fig:PerformanceAppUI}
+\end{figure}
+
+\subsection{Ablauf}
+Mithilfe der drei Buttons wird der Algorithmus, der für den Performancetest verwendet wird, gestartet. Der Button \member{Java threads} startet hierbei eine Durchführung die Java Threads verwendet. Die anderen beiden Buttons starten einen Testdurchlauf mit asynchronen Tasks. Der Unterschied zwischen ihnen ist, ob die Tasks seriell oder parallel ausgeführt werden.
+\\
+\\
+Während eines Testdurchlaufs berechnet jeder Thread/Task die Fibonacci Folge. Die Grenze bis zu welcher Zahl die Folge berechnet wird, wird aus dem ersten Textfeld ausgelesen. Die Anzahl der Threads/Tasks die die Folge berechnen steht im zweiten Textfeld zur Verfügung. Dabei gilt es zu beachten, dass sich die gestarteten Threads/Tasks die Arbeit nicht aufteilen. Um eine Vielzahl an längeren Operationen zu simulieren, berechnet jeder Thread/Task die komplette Folge für sich.
+\\
+\\
+Sind alle Berechnungen abgeschlossen, werden die Ergebnisse in die beiden Labels am unteren Ende der Applikation geschrieben. Im oberen Label steht die gesamte Dauer der Berechnung von allen Threads/Tasks. Im Unteren Label steht die Zeit welche ein Thread/Task für die Berechnung im Durchschnitt benötigt hat.
+
+\section{Verwendete Mobilgeräte}
+Für die Tests wurden zwei Mobilgeräte verwendet, das Nexus 4 und das Samsung Galaxy S4. In den folgenden Aufzählungen sind die wichtigsten Eckdaten der beiden Geräte zu sehen.
+
+\subsection{Nexus 4 \cite{48}}
+\begin{itemize}
+  \item Android Version: 4.4.4
+  \item CPU: Quadcore mit 1,5 GHz
+  \item RAM: 2 GB
+\end{itemize}
+
+\subsection{Samsung Galaxy S4 \cite{49}}
+\begin{itemize}
+  \item Android Version: 4.4.2
+  \item CPU: Quadcore mit 1,9 GHz
+  \item RAM: 2 GB
+\end{itemize}
+
+\section{Ergebnisse}
+Die Zeitmessungen wurden auf jedem Gerät für alle drei Arten fünfmal ausgeführt. In Tabelle 6.1 und Tabelle 6.2 sieht man die Durchschnittswerte der Messungen. In Abbildung 6.2 und Abbildung 6.3 werden diese Werte in Form von Diagrammen dargestellt. In den Diagrammen wird die Dauer Logarithmisch dargestellt.
+\\
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{3}{|l|}{\multirow{2}{*}{}}                       & \multicolumn{3}{l|}{Fibonacci von n}                               \\ \cline{4-6} 
+\multicolumn{3}{|l|}{}                                        & 10\textasciicircum 4 & 10\textasciicircum 6 & 10\textasciicircum 7 \\ \hline
+\multirow{12}{*}{\rotatebox[origin=c]{90}{Anzahl der Threads}} & Java Threads      & 1  & 0,9                  & 29,7                 & 239,6                \\ \cline{2-6} 
+                                     &                   & 4  & 3,1                  & 82,4                 & 330,8                \\ \cline{3-6} 
+                                     &                   & 16 & 10,7                 & 179,3                & 947                  \\ \cline{3-6} 
+                                     &                   & 32 & 19,2                 & 272,4                & 1769                 \\ \cline{2-6} 
+                                     & Tasks seriell     & 1  & 13,2                 & 36,9                 & 261,8                \\ \cline{2-6} 
+                                     &                   & 4  & 13,4                 & 118,3                & 941,6                \\ \cline{3-6} 
+                                     &                   & 16 & 19                   & 409,8                & 3518,8               \\ \cline{3-6} 
+                                     &                   & 32 & 24,2                 & 790,8                & 6981                 \\ \cline{2-6} 
+                                     & Tasks parallel    & 1  & 11,6                 & 36,5                 & 328,4                \\ \cline{2-6} 
+                                     & \multirow{3}{*}{} & 4  & 15,7                 & 85,9                 & 269,3                \\ \cline{3-6} 
+                                     &                   & 16 & 16,2                 & 181,6                & 1045,5               \\ \cline{3-6} 
+                                     &                   & 32 & 25,3                 & 274,8                & 1997,1               \\ \hline
+\end{tabular}
+\caption{Gesamtzeiten eines Durchlaufs in Millisekunden}
+\label{table:totaltime}
+\end{table}
+\\
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{3}{|l|}{\multirow{2}{*}{}}                       & \multicolumn{3}{l|}{Fibonacci von n}                               \\ \cline{4-6} 
+\multicolumn{3}{|l|}{}                                        & 10\textasciicircum 4 & 10\textasciicircum 6 & 10\textasciicircum 7 \\ \hline
+\multirow{12}{*}{\rotatebox[origin=c]{90}{Anzahl der Threads}} & Java Threads      & 1  & 0,1                  & 29                   & 238,9                \\ \cline{2-6} 
+                                     &                   & 4  & 0,2                  & 61,5                 & 291,6                \\ \cline{3-6} 
+                                     &                   & 16 & 0,1                  & 56                   & 791,9                \\ \cline{3-6} 
+                                     &                   & 32 & 0,1                  & 43,8                 & 1370,7               \\ \cline{2-6} 
+                                     & Tasks seriell     & 1  & 0,4                  & 35,2                 & 260,1                \\ \cline{2-6} 
+                                     &                   & 4  & 0,1                  & 28,5                 & 234,4                \\ \cline{3-6} 
+                                     &                   & 16 & 0,1                  & 24,6                 & 219                  \\ \cline{3-6} 
+                                     &                   & 32 & 0,1                  & 24                   & 217,5                \\ \cline{2-6} 
+                                     & Tasks parallel    & 1  & 0,2                  & 35,3                 & 270                  \\ \cline{2-6} 
+                                     & \multirow{3}{*}{} & 4  & 0,1                  & 70,2                 & 296,3                \\ \cline{3-6} 
+                                     &                   & 16 & 0,3                  & 48,6                 & 299,6                \\ \cline{3-6} 
+                                     &                   & 32 & 0,1                  & 38,9                 & 292,5                \\ \hline
+\end{tabular}
+\caption{Durchschnittszeiten eines Threads/Tasks in Millisekunden}
+\label{table:averagetime}
+\end{table}
+In Tabelle 6.1 und Abbildung 6.2 werden die Gesamtzeiten eines Durchlaufes dargestellt. Man kann hier erkennen, dass Threads bei geringer Problemgröße schneller sind als asynchrone Tasks. Bei steigender Problemgröße ist der Unterschied zwischen Threads und parallel ausgeführten asynchronen Tasks allerdings sehr gering und in Relation zur gesamten Dauer der Ausführung vernachlässigbar. Der Grund das Threads bei geringer Problemgröße schneller sind liegt daran, dass sie einfacher aufgebaut sind als asynchrone Tasks und einen viel geringeren Overhead besitzen.
+\\
+\\
+Sowohl bei den Threads als auch bei den asynchronen Tasks kann man sehr gut erkennen, dass der Test auf einem Prozessor mit vier Kernen ausgeführt wurde. Zwischen einem Thread/Task und vier Thread/Task besteht nur ein kleiner Unterschied in der Ausführungszeit. Der geringe Zuwachs lässt sich auf die zusätzlichen Kontextwechsel, aufgrund der vermehrten Threads zurückführen. Betrachtet man nun die Zeiten von 16 und 32 Threads/Tasks merkt man, dass sie erheblich höher sind. Der Grund dafür ist, dass der Prozessor nicht genügend Kerne besitzt um jede Berechnung auf einen eigenen Kern zu verlagern.
+\\
+\\
+Die serielle Ausführung von asynchronen Tasks dauert, wie erwartet, um ein vielfaches länger als die parallele Ausführung. Das liegt daran das bei der seriellen Ausführung immer nur ein Kern des Prozessors verwendet wird und somit ein Task nach dem anderen ausgeführt werden muss.
+\\
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{GesamtzeitDiagramm}
+\caption{Diagramm der Gesamtzeiten eines Durchlaufs}
+\label{fig:GesamtzeitDiagramm}
+\end{figure}
+\\
+In Tabelle 6.1 und Abbildung 6.3 werden die durchschnittlichen Ausführungszeiten eines Threads/Tasks dargestellt. Bei einer sehr kleinen Problemgröße sind noch alle drei Varianten gleich schnell.
+\\
+\\
+Betrachtet man nun die Messwerte für die Fibonacci Folge von 10\textasciicircum 7 kann man erkennen, dass bei 16 und 32 gestarteten Threads/Tasks die seriell ausgeführten Tasks am schnellsten sind. Der Grund hierfür liegt daran, dass bei den seriell ausgeführten Tasks jeder Task nach seinem Start sofort abgearbeitet wird und der nächste Task erst startet sobald der vorherige fertig ist. Bei parallel ausgeführten Tasks und Threads ist das allerdings nicht der Fall. Hier werden mehrere Berechnungen auf einmal gestartet und es wird nicht garantiert welche zuerst beendet werden. Parallel ausgeführte Tasks bleiben auf einem relativ konstanten Wert von 290-300 Millisekunden. Das liegt daran, dass sie standardmäßig einen Threadpool verwenden und immer nur vier Tasks auf einmal gestartet werden. Java Thread hingegen verwenden standardmäßig keinen Threadpool und daher werden alle Threads auf einmal gestartet und ausgeführt. Da der Scheduler allen Threads gleichmäßig Rechenzeit zuweist, brauchen die Threads hier im Schnitt länger. In der Gesamtausführungszeit sind Threads und parallel ausgeführte Tasks, allerdings in etwa gleich schnell.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{DurchschnittszeitDiagramm}
+\caption{Diagramm der Durchschnittszeiten eines Threads/Tasks}
+\label{fig:DurchschnittszeitDiagramm}
+\end{figure}

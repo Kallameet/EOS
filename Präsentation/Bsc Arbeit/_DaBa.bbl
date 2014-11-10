@@ -1,0 +1,1231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{entry}{}
+    \entry{21}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Activities}
+      \field{title}{Activities}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/activities.html
+      \endverb
+    \endentry
+    \entry{22}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Activity Lifecycle}
+      \field{title}{Activity Lifecycle}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/images/activity_lifecycle.png
+      \endverb
+    \endentry
+    \entry{7}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c92d8342e4a870389106745f95adc592}{Amadeo}{A\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c92d8342e4a870389106745f95adc592}{Amadeo}{A\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c92d8342e4a870389106745f95adc592}
+      \strng{fullhash}{c92d8342e4a870389106745f95adc592}
+      \field{sortinit}{A}
+      \field{labeltitle}{A History of Pre-Cupcake Android Codenames}
+      \field{title}{A History of Pre-Cupcake Android Codenames}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.androidpolice.com/2012/09/17/a-history-of-pre-cupcake-android-codenames/
+      \endverb
+    \endentry
+    \entry{10}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 1.5 Platform Highlights}
+      \field{title}{Android 1.5 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-1.5-highlights.html
+      \endverb
+    \endentry
+    \entry{11}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 1.6 Platform Highlights}
+      \field{title}{Android 1.6 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-1.6-highlights.html
+      \endverb
+    \endentry
+    \entry{12}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 2.0 Platform Highlights}
+      \field{title}{Android 2.0 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.0-highlights.html
+      \endverb
+    \endentry
+    \entry{13}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 2.2 Platform Highlights}
+      \field{title}{Android 2.2 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.2-highlights.html
+      \endverb
+    \endentry
+    \entry{19}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Anatomy and Physiology}
+      \field{title}{Android Anatomy and Physiology}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://androidteam.googlecode.com/files/Anatomy-Physiology-of-an-Android.pdf
+      \endverb
+    \endentry
+    \entry{40}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Debug Bridge}
+      \field{title}{Android Debug Bridge}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/tools/help/adb.html
+      \endverb
+    \endentry
+    \entry{18}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android KitKat}
+      \field{title}{Android KitKat}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/kitkat.html
+      \endverb
+    \endentry
+    \entry{37}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Studio}
+      \field{title}{Android Studio}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/sdk/installing/studio.html
+      \endverb
+    \endentry
+    \entry{6}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Version}
+      \field{title}{Android Version}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Android_historical_version_distribution_-_vector.svg/2000px-Android_historical_version_distribution_-_vector.svg.png
+      \endverb
+    \endentry
+    \entry{29}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Application Fundamentals}
+      \field{title}{Application Fundamentals}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/fundamentals.html
+      \endverb
+    \endentry
+    \entry{36}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{AsyncTask}
+      \field{title}{AsyncTask}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/os/AsyncTask.html
+      \endverb
+    \endentry
+    \entry{20}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=7eaac2ce77fd967940c339416114635f}{Bornstein}{B\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7eaac2ce77fd967940c339416114635f}{Bornstein}{B\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7eaac2ce77fd967940c339416114635f}
+      \strng{fullhash}{7eaac2ce77fd967940c339416114635f}
+      \field{sortinit}{B}
+      \field{labeltitle}{Dalvik VM Internals}
+      \field{title}{Dalvik VM Internals}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://sites.google.com/site/io/dalvik-vm-internals/2008-05-29-Presentation-Of-Dalvik-VM-Internals.pdf
+      \endverb
+    \endentry
+    \entry{25}{online}{}
+      \field{sortinit}{C}
+      \field{labeltitle}{Content Providers}
+      \field{title}{Content Providers}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/topics/providers/content-providers.html
+      \endverb
+    \endentry
+    \entry{34}{online}{}
+      \field{sortinit}{D}
+      \field{labeltitle}{Description of race conditions and deadlocks}
+      \field{title}{Description of race conditions and deadlocks}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://support.microsoft.com/kb/317723
+      \endverb
+    \endentry
+    \entry{14}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Gingerbread}
+      \field{title}{Gingerbread}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.3-highlights.html
+      \endverb
+    \endentry
+    \entry{39}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Gradle}
+      \field{title}{Gradle}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.gradle.org/
+      \endverb
+    \endentry
+    \entry{15}{online}{}
+      \field{sortinit}{H}
+      \field{labeltitle}{Honeycomb}
+      \field{title}{Honeycomb}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-3.0-highlights.html
+      \endverb
+    \endentry
+    \entry{16}{online}{}
+      \field{sortinit}{I}
+      \field{labeltitle}{Ice Cream Sandwich}
+      \field{title}{Ice Cream Sandwich}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-4.0-highlights.html
+      \endverb
+    \endentry
+    \entry{3}{online}{}
+      \field{sortinit}{I}
+      \field{labeltitle}{Industry Leaders Announce Open Platform for Mobile Devices}
+      \field{title}{Industry Leaders Announce Open Platform for Mobile Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://www.openhandsetalliance.com/press_110507.html
+      \endverb
+    \endentry
+    \entry{2}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=635f496a282179afa4d140d8df43698a}{Ionescu}{I\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=635f496a282179afa4d140d8df43698a}{Ionescu}{I\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{635f496a282179afa4d140d8df43698a}
+      \strng{fullhash}{635f496a282179afa4d140d8df43698a}
+      \field{sortinit}{I}
+      \field{labeltitle}{Original Android Prototype Revealed During Google, Oracle Trial}
+      \field{title}{Original Android Prototype Revealed During Google, Oracle Trial}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.pcworld.com/article/254539/original_android_prototype_revealed_during_google_oracle_trial.html
+      \endverb
+    \endentry
+    \entry{17}{online}{}
+      \field{sortinit}{J}
+      \field{labeltitle}{Jelly Bean}
+      \field{title}{Jelly Bean}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/jelly-bean.html
+      \endverb
+    \endentry
+    \entry{30}{online}{}
+      \field{sortinit}{L}
+      \field{labeltitle}{Lock}
+      \field{title}{Lock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/Lock.html
+      \endverb
+    \endentry
+    \entry{45}{online}{}
+      \field{sortinit}{M}
+      \field{labeltitle}{Managing AVDs with AVD Manager}
+      \field{title}{Managing AVDs with AVD Manager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/managing-avds.html
+      \endverb
+    \endentry
+    \entry{44}{online}{}
+      \field{sortinit}{M}
+      \field{labeltitle}{Managing Virtual Devices}
+      \field{title}{Managing Virtual Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/index.html
+      \endverb
+    \endentry
+    \entry{9}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=084128fc4c24a94586e97cf3c45a29e1}{Morrill}{M\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=084128fc4c24a94586e97cf3c45a29e1}{Morrill}{M\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{084128fc4c24a94586e97cf3c45a29e1}
+      \strng{fullhash}{084128fc4c24a94586e97cf3c45a29e1}
+      \field{sortinit}{M}
+      \field{labeltitle}{Announcing the Android 1.0 SDK, release 1}
+      \field{title}{Announcing the Android 1.0 SDK, release 1}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://android-developers.blogspot.co.at/2008/09/announcing-android-10-sdk-release-1.html
+      \endverb
+    \endentry
+    \entry{5}{online}{}
+      \field{sortinit}{N}
+      \field{labeltitle}{Nexus}
+      \field{title}{Nexus}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.google.at/nexus/
+      \endverb
+    \endentry
+    \entry{48}{online}{}
+      \field{sortinit}{N}
+      \field{labeltitle}{Nexus 4}
+      \field{title}{Nexus 4}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.google.de/nexus/4/specs/
+      \endverb
+    \endentry
+    \entry{27}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{PackageManager}
+      \field{title}{PackageManager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/content/pm/PackageManager.html
+      \endverb
+    \endentry
+    \entry{1}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=3fa4b36ad62107d6a04864a372426afa}{Pakalski}{P\bibinitperiod}{Ingo}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=3fa4b36ad62107d6a04864a372426afa}{Pakalski}{P\bibinitperiod}{Ingo}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3fa4b36ad62107d6a04864a372426afa}
+      \strng{fullhash}{3fa4b36ad62107d6a04864a372426afa}
+      \field{sortinit}{P}
+      \field{labeltitle}{Android war ursprünglich für Digitalkameras gedacht}
+      \field{title}{Android war ursprünglich für Digitalkameras gedacht}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.golem.de/news/andy-rubin-android-war-urspruenglich-fuer-digitalkameras-gedacht-1304-98779.html
+      \endverb
+    \endentry
+    \entry{35}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{Processes and Threads}
+      \field{title}{Processes and Threads}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/processes-and-threads.html
+      \endverb
+    \endentry
+    \entry{42}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{Profiling with Traceview and dmtracedump}
+      \field{title}{Profiling with Traceview and dmtracedump}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/debugging-tracing.html
+      \endverb
+    \endentry
+    \entry{43}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{Reading and Writing Logs}
+      \field{title}{Reading and Writing Logs}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/debugging-log.html
+      \endverb
+    \endentry
+    \entry{32}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{ReadWriteLock}
+      \field{title}{ReadWriteLock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/ReadWriteLock.html
+      \endverb
+    \endentry
+    \entry{31}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{ReentrantLock}
+      \field{title}{ReentrantLock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/ReentrantLock.html
+      \endverb
+    \endentry
+    \entry{28}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{Resources Overview}
+      \field{title}{Resources Overview}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/topics/resources/overview.html
+      \endverb
+    \endentry
+    \entry{8}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=66ee9741fa0aef389a631deac13613b9}{Rubin}{R\bibinitperiod}{Andy}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=66ee9741fa0aef389a631deac13613b9}{Rubin}{R\bibinitperiod}{Andy}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{66ee9741fa0aef389a631deac13613b9}
+      \strng{fullhash}{66ee9741fa0aef389a631deac13613b9}
+      \field{sortinit}{R}
+      \field{labeltitle}{Where's my Gphone?}
+      \field{title}{Where's my Gphone?}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://googleblog.blogspot.co.at/2007/11/wheres-my-gphone.html
+      \endverb
+    \endentry
+    \entry{49}{online}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Samsung Galaxy S4}
+      \field{title}{Samsung Galaxy S4}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.samsung.com/de/consumer/mobile-device/smartphone/smartphone/GT-I9505ZKADBT
+      \endverb
+    \endentry
+    \entry{33}{online}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Semaphore}
+      \field{title}{Semaphore}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/Semaphore.html
+      \endverb
+    \endentry
+    \entry{38}{online}{}
+      \field{sortinit}{T}
+      \field{labeltitle}{The Apache Ant Project}
+      \field{title}{The Apache Ant Project}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://ant.apache.org/
+      \endverb
+    \endentry
+    \entry{41}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using DDMS}
+      \field{title}{Using DDMS}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/ddms.html
+      \endverb
+    \endentry
+    \entry{47}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using Hardware Devices}
+      \field{title}{Using Hardware Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/device.html
+      \endverb
+    \endentry
+    \entry{46}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using the Emulator}
+      \field{title}{Using the Emulator}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/emulator.html
+      \endverb
+    \endentry
+    \entry{26}{online}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{View}
+      \field{title}{View}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/View.html
+      \endverb
+    \endentry
+    \entry{4}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=27889b71745417672b87331de0dcaab2}{Wilson}{W\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=27889b71745417672b87331de0dcaab2}{Wilson}{W\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{27889b71745417672b87331de0dcaab2}
+      \strng{fullhash}{27889b71745417672b87331de0dcaab2}
+      \field{sortinit}{W}
+      \field{labeltitle}{T-Mobile G1: Full Details of the HTC Dream Android Phone}
+      \field{title}{T-Mobile G1: Full Details of the HTC Dream Android Phone}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://gizmodo.com/5053264/t-mobile-g1-full-details-of-the-htc-dream-android-phone
+      \endverb
+    \endentry
+    \entry{24}{online}{}
+      \field{sortinit}{W}
+      \field{labeltitle}{Window}
+      \field{title}{Window}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/Window.html
+      \endverb
+    \endentry
+    \entry{23}{online}{}
+      \field{sortinit}{W}
+      \field{labeltitle}{WindowManager}
+      \field{title}{WindowManager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/WindowManager.html
+      \endverb
+    \endentry
+  \endsortlist
+  \sortlist{entry}{nty}
+    \entry{21}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Activities}
+      \field{title}{Activities}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/activities.html
+      \endverb
+    \endentry
+    \entry{22}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Activity Lifecycle}
+      \field{title}{Activity Lifecycle}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/images/activity_lifecycle.png
+      \endverb
+    \endentry
+    \entry{7}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=c92d8342e4a870389106745f95adc592}{Amadeo}{A\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c92d8342e4a870389106745f95adc592}{Amadeo}{A\bibinitperiod}{Ron}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c92d8342e4a870389106745f95adc592}
+      \strng{fullhash}{c92d8342e4a870389106745f95adc592}
+      \field{sortinit}{A}
+      \field{labeltitle}{A History of Pre-Cupcake Android Codenames}
+      \field{title}{A History of Pre-Cupcake Android Codenames}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.androidpolice.com/2012/09/17/a-history-of-pre-cupcake-android-codenames/
+      \endverb
+    \endentry
+    \entry{10}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 1.5 Platform Highlights}
+      \field{title}{Android 1.5 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-1.5-highlights.html
+      \endverb
+    \endentry
+    \entry{11}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 1.6 Platform Highlights}
+      \field{title}{Android 1.6 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-1.6-highlights.html
+      \endverb
+    \endentry
+    \entry{12}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 2.0 Platform Highlights}
+      \field{title}{Android 2.0 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.0-highlights.html
+      \endverb
+    \endentry
+    \entry{13}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android 2.2 Platform Highlights}
+      \field{title}{Android 2.2 Platform Highlights}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.2-highlights.html
+      \endverb
+    \endentry
+    \entry{19}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Anatomy and Physiology}
+      \field{title}{Android Anatomy and Physiology}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://androidteam.googlecode.com/files/Anatomy-Physiology-of-an-Android.pdf
+      \endverb
+    \endentry
+    \entry{40}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Debug Bridge}
+      \field{title}{Android Debug Bridge}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/tools/help/adb.html
+      \endverb
+    \endentry
+    \entry{18}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android KitKat}
+      \field{title}{Android KitKat}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/kitkat.html
+      \endverb
+    \endentry
+    \entry{37}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Studio}
+      \field{title}{Android Studio}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/sdk/installing/studio.html
+      \endverb
+    \endentry
+    \entry{6}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Android Version}
+      \field{title}{Android Version}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Android_historical_version_distribution_-_vector.svg/2000px-Android_historical_version_distribution_-_vector.svg.png
+      \endverb
+    \endentry
+    \entry{29}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{Application Fundamentals}
+      \field{title}{Application Fundamentals}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/fundamentals.html
+      \endverb
+    \endentry
+    \entry{36}{online}{}
+      \field{sortinit}{A}
+      \field{labeltitle}{AsyncTask}
+      \field{title}{AsyncTask}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/os/AsyncTask.html
+      \endverb
+    \endentry
+    \entry{20}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=7eaac2ce77fd967940c339416114635f}{Bornstein}{B\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=7eaac2ce77fd967940c339416114635f}{Bornstein}{B\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7eaac2ce77fd967940c339416114635f}
+      \strng{fullhash}{7eaac2ce77fd967940c339416114635f}
+      \field{sortinit}{B}
+      \field{labeltitle}{Dalvik VM Internals}
+      \field{title}{Dalvik VM Internals}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://sites.google.com/site/io/dalvik-vm-internals/2008-05-29-Presentation-Of-Dalvik-VM-Internals.pdf
+      \endverb
+    \endentry
+    \entry{25}{online}{}
+      \field{sortinit}{C}
+      \field{labeltitle}{Content Providers}
+      \field{title}{Content Providers}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/topics/providers/content-providers.html
+      \endverb
+    \endentry
+    \entry{34}{online}{}
+      \field{sortinit}{D}
+      \field{labeltitle}{Description of race conditions and deadlocks}
+      \field{title}{Description of race conditions and deadlocks}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://support.microsoft.com/kb/317723
+      \endverb
+    \endentry
+    \entry{14}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Gingerbread}
+      \field{title}{Gingerbread}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-2.3-highlights.html
+      \endverb
+    \endentry
+    \entry{39}{online}{}
+      \field{sortinit}{G}
+      \field{labeltitle}{Gradle}
+      \field{title}{Gradle}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.gradle.org/
+      \endverb
+    \endentry
+    \entry{15}{online}{}
+      \field{sortinit}{H}
+      \field{labeltitle}{Honeycomb}
+      \field{title}{Honeycomb}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-3.0-highlights.html
+      \endverb
+    \endentry
+    \entry{16}{online}{}
+      \field{sortinit}{I}
+      \field{labeltitle}{Ice Cream Sandwich}
+      \field{title}{Ice Cream Sandwich}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/android-4.0-highlights.html
+      \endverb
+    \endentry
+    \entry{3}{online}{}
+      \field{sortinit}{I}
+      \field{labeltitle}{Industry Leaders Announce Open Platform for Mobile Devices}
+      \field{title}{Industry Leaders Announce Open Platform for Mobile Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://www.openhandsetalliance.com/press_110507.html
+      \endverb
+    \endentry
+    \entry{2}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=635f496a282179afa4d140d8df43698a}{Ionescu}{I\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=635f496a282179afa4d140d8df43698a}{Ionescu}{I\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{635f496a282179afa4d140d8df43698a}
+      \strng{fullhash}{635f496a282179afa4d140d8df43698a}
+      \field{sortinit}{I}
+      \field{labeltitle}{Original Android Prototype Revealed During Google, Oracle Trial}
+      \field{title}{Original Android Prototype Revealed During Google, Oracle Trial}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.pcworld.com/article/254539/original_android_prototype_revealed_during_google_oracle_trial.html
+      \endverb
+    \endentry
+    \entry{17}{online}{}
+      \field{sortinit}{J}
+      \field{labeltitle}{Jelly Bean}
+      \field{title}{Jelly Bean}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/about/versions/jelly-bean.html
+      \endverb
+    \endentry
+    \entry{30}{online}{}
+      \field{sortinit}{L}
+      \field{labeltitle}{Lock}
+      \field{title}{Lock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/Lock.html
+      \endverb
+    \endentry
+    \entry{45}{online}{}
+      \field{sortinit}{M}
+      \field{labeltitle}{Managing AVDs with AVD Manager}
+      \field{title}{Managing AVDs with AVD Manager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/managing-avds.html
+      \endverb
+    \endentry
+    \entry{44}{online}{}
+      \field{sortinit}{M}
+      \field{labeltitle}{Managing Virtual Devices}
+      \field{title}{Managing Virtual Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/index.html
+      \endverb
+    \endentry
+    \entry{9}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=084128fc4c24a94586e97cf3c45a29e1}{Morrill}{M\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=084128fc4c24a94586e97cf3c45a29e1}{Morrill}{M\bibinitperiod}{Dan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{084128fc4c24a94586e97cf3c45a29e1}
+      \strng{fullhash}{084128fc4c24a94586e97cf3c45a29e1}
+      \field{sortinit}{M}
+      \field{labeltitle}{Announcing the Android 1.0 SDK, release 1}
+      \field{title}{Announcing the Android 1.0 SDK, release 1}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://android-developers.blogspot.co.at/2008/09/announcing-android-10-sdk-release-1.html
+      \endverb
+    \endentry
+    \entry{5}{online}{}
+      \field{sortinit}{N}
+      \field{labeltitle}{Nexus}
+      \field{title}{Nexus}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.google.at/nexus/
+      \endverb
+    \endentry
+    \entry{48}{online}{}
+      \field{sortinit}{N}
+      \field{labeltitle}{Nexus 4}
+      \field{title}{Nexus 4}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.google.de/nexus/4/specs/
+      \endverb
+    \endentry
+    \entry{27}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{PackageManager}
+      \field{title}{PackageManager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/content/pm/PackageManager.html
+      \endverb
+    \endentry
+    \entry{1}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=3fa4b36ad62107d6a04864a372426afa}{Pakalski}{P\bibinitperiod}{Ingo}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=3fa4b36ad62107d6a04864a372426afa}{Pakalski}{P\bibinitperiod}{Ingo}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3fa4b36ad62107d6a04864a372426afa}
+      \strng{fullhash}{3fa4b36ad62107d6a04864a372426afa}
+      \field{sortinit}{P}
+      \field{labeltitle}{Android war ursprünglich für Digitalkameras gedacht}
+      \field{title}{Android war ursprünglich für Digitalkameras gedacht}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.golem.de/news/andy-rubin-android-war-urspruenglich-fuer-digitalkameras-gedacht-1304-98779.html
+      \endverb
+    \endentry
+    \entry{35}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{Processes and Threads}
+      \field{title}{Processes and Threads}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/components/processes-and-threads.html
+      \endverb
+    \endentry
+    \entry{42}{online}{}
+      \field{sortinit}{P}
+      \field{labeltitle}{Profiling with Traceview and dmtracedump}
+      \field{title}{Profiling with Traceview and dmtracedump}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/debugging-tracing.html
+      \endverb
+    \endentry
+    \entry{43}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{Reading and Writing Logs}
+      \field{title}{Reading and Writing Logs}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/debugging-log.html
+      \endverb
+    \endentry
+    \entry{32}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{ReadWriteLock}
+      \field{title}{ReadWriteLock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/ReadWriteLock.html
+      \endverb
+    \endentry
+    \entry{31}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{ReentrantLock}
+      \field{title}{ReentrantLock}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/locks/ReentrantLock.html
+      \endverb
+    \endentry
+    \entry{28}{online}{}
+      \field{sortinit}{R}
+      \field{labeltitle}{Resources Overview}
+      \field{title}{Resources Overview}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/guide/topics/resources/overview.html
+      \endverb
+    \endentry
+    \entry{8}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=66ee9741fa0aef389a631deac13613b9}{Rubin}{R\bibinitperiod}{Andy}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=66ee9741fa0aef389a631deac13613b9}{Rubin}{R\bibinitperiod}{Andy}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{66ee9741fa0aef389a631deac13613b9}
+      \strng{fullhash}{66ee9741fa0aef389a631deac13613b9}
+      \field{sortinit}{R}
+      \field{labeltitle}{Where's my Gphone?}
+      \field{title}{Where's my Gphone?}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://googleblog.blogspot.co.at/2007/11/wheres-my-gphone.html
+      \endverb
+    \endentry
+    \entry{49}{online}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Samsung Galaxy S4}
+      \field{title}{Samsung Galaxy S4}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://www.samsung.com/de/consumer/mobile-device/smartphone/smartphone/GT-I9505ZKADBT
+      \endverb
+    \endentry
+    \entry{33}{online}{}
+      \field{sortinit}{S}
+      \field{labeltitle}{Semaphore}
+      \field{title}{Semaphore}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/java/util/concurrent/Semaphore.html
+      \endverb
+    \endentry
+    \entry{38}{online}{}
+      \field{sortinit}{T}
+      \field{labeltitle}{The Apache Ant Project}
+      \field{title}{The Apache Ant Project}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://ant.apache.org/
+      \endverb
+    \endentry
+    \entry{41}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using DDMS}
+      \field{title}{Using DDMS}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/debugging/ddms.html
+      \endverb
+    \endentry
+    \entry{47}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using Hardware Devices}
+      \field{title}{Using Hardware Devices}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/device.html
+      \endverb
+    \endentry
+    \entry{46}{online}{}
+      \field{sortinit}{U}
+      \field{labeltitle}{Using the Emulator}
+      \field{title}{Using the Emulator}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb https://developer.android.com/tools/devices/emulator.html
+      \endverb
+    \endentry
+    \entry{26}{online}{}
+      \field{sortinit}{V}
+      \field{labeltitle}{View}
+      \field{title}{View}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/View.html
+      \endverb
+    \endentry
+    \entry{4}{online}{}
+      \name{labelname}{1}{}{%
+        {{hash=27889b71745417672b87331de0dcaab2}{Wilson}{W\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=27889b71745417672b87331de0dcaab2}{Wilson}{W\bibinitperiod}{Mark}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{27889b71745417672b87331de0dcaab2}
+      \strng{fullhash}{27889b71745417672b87331de0dcaab2}
+      \field{sortinit}{W}
+      \field{labeltitle}{T-Mobile G1: Full Details of the HTC Dream Android Phone}
+      \field{title}{T-Mobile G1: Full Details of the HTC Dream Android Phone}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://gizmodo.com/5053264/t-mobile-g1-full-details-of-the-htc-dream-android-phone
+      \endverb
+    \endentry
+    \entry{24}{online}{}
+      \field{sortinit}{W}
+      \field{labeltitle}{Window}
+      \field{title}{Window}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/Window.html
+      \endverb
+    \endentry
+    \entry{23}{online}{}
+      \field{sortinit}{W}
+      \field{labeltitle}{WindowManager}
+      \field{title}{WindowManager}
+      \field{urlday}{23}
+      \field{urlmonth}{08}
+      \field{urlyear}{2014}
+      \verb{url}
+      \verb http://developer.android.com/reference/android/view/WindowManager.html
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

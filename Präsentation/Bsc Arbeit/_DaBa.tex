@@ -1,0 +1,76 @@
+\documentclass[bachelor,german]{hgbthesis}
+% Zulässige Class Options: 
+%   Typ der Arbeit: diplom, master (default), bachelor, praktikum 
+%   Hauptsprache: german (default), english
+%%------------------------------------------------------------
+
+\graphicspath{{images/}}    % wo liegen die Bilder? 
+\bibliography{literatur}  	% Angabe der BibTeX-Datei, % utf8-change
+\include{kommandos}
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+% Einträge für ALLE Arbeiten: --------------------------------
+\title{Entwicklung und Debuggen von paralleler Software in Android}
+\author{Reinhard Penn}
+\studiengang{Hardware Software Design}
+\studienort{Hagenberg}
+\abgabedatum{2014}{09}{15}	% {YYYY}{MM}{DD}
+
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+\nummer{1110306019-A}   % XX...X = Stud-ID, z.B. 0310238045-A  
+                        % (A = 1. Bachelorarbeit)
+\semester{Sommersemester 2014} 
+\gegenstand{Parallele Software/Systemprogrammierung} 
+\betreuer{Ing. Martin Führlinger, MSc} % oder \betreuerin{..}
+
+%%% zusätzlich für einen Praktikumsbericht: -----------------
+%%\nummer{1110306019-B}   % XX...X = Stud-ID, z.B. 0310238045-B  
+                        % (B = 2. Bachelorarbeit)
+%\betreuer{Mag.~Pjotr I.~Czar\\Creative Director}  % \betreuerin{..}
+%\firma{%
+%   Oligarchic Media International GmbH\\
+%   Online Division\\
+%   1020 Wien, Hubertusgasse 3a
+%}
+%\firmenTel{1-234-5678-100}
+%\firmenUrl{www.mogul.at}
+
+%\strictlicense  % erzeugt restriktive Lizenzformel
+
+%%%----------------------------------------------------------
+\frontmatter
+\maketitle
+\tableofcontents
+%%%----------------------------------------------------------
+
+\include{kurzfassung}		
+\include{abstract}			
+
+%%%----------------------------------------------------------
+\mainmatter         % Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+
+\include{einleitung}
+\include{ueberblickAndroid}
+\include{multithreading}
+\include{entwicklungsumbegungen}
+\include{debugging}
+\include{performance}
+\include{schluss}
+
+%%%----------------------------------------------------------
+%%%Anhang
+\appendix
+
+
+%%%----------------------------------------------------------
+\MakeBibliography[nosplit]
+%%%----------------------------------------------------------
+
+%%%Messbox zur Druckkontrolle
+\include{messbox}
+
+\end{document}
