@@ -7,7 +7,7 @@
 % REVISION HISTORY
 % 20080211 changed some space characters in the title-author block
 %
-\documentclass[10pt,conference,a4paper]{IEEEtran}
+\documentclass[11pt,conference,a4paper]{IEEEtran}
 \usepackage{times,amsmath,epsfig}
 \include{kommandos}
 %
@@ -15,56 +15,98 @@
 %
 \author{%
 % author names are typeset in 11pt, which is the default size in the author block
-{Reinhard Penn, Sebastian Ratzenböck}%
+{Reinhard Penn, Sebastian Ratzenbï¿½ck}%
 % add some space between author names and affils
+\vspace{1.6mm}\\
+\fontsize{10}{10}\selectfont\itshape
+% 20080211 CAUSAL PRODUCTIONS
+% separate superscript on following line from affiliation using narrow space
+Embedded Systems Design, FH OberÃ¶sterreich\\
+Campus Hagenberg\\
+\fontsize{9}{9}\selectfont\ttfamily\upshape
+%
+% 20080211 CAUSAL PRODUCTIONS
+% in the following email addresses, separate the superscript from the email address
+% using a narrow space \,
+% the reason is that Acrobat Reader has an option to auto-detect urls and email
+% addresses, and make them 'hot'. Without a narrow space, the superscript is included
+% in the email address and corrupts it.
+% Also, removed ~ from pre-superscript since it does not seem to serve any purpose
+$^{1}$\,S1410567017@students.fh-hagenberg.at\\
+$^{3}$\,S1419002063@students.fh-hagenberg.at%
+% add some space between email and affil
+\vspace{1.2mm}\\
 }
 %
 \begin{document}
 \maketitle
 %
 \begin{abstract}
-
+This paper is about the Dalvik Virtual Machine. The goals are to give a short overview on the Dalvik VM and its function. Furthermore the \member{.dex} file format will be explained. In the end a comparison between the Dalvik VM and the newer Android Runtime will take place.
 \end{abstract}
 
 %
-\section{Allgemeines}
-Bei Dalvik handelt es sich um eine Open Source Software die von Dan Bornstein entwickelt wurde. Benannt ist sie nach einem Fischerdorf in Eyjafjörður, Island. Veröffentlicht wurde die Software unter Apache License 2.0. Die Ausführung findet auf einem Linux Kernel statt.
+\begin{figure}
+\centering
+\includegraphics[width=0.25\textwidth]{Android_robot}
+\caption{Android Logo\cite{6}}
+\label{fig:Android_robot}
+\end{figure}
+
+\section{Allgemeines\cite{3}}
+Bei Dalvik handelt es sich um eine Open Source Software die von Dan Bornstein entwickelt wurde. Benannt ist sie nach einem Fischerdorf in Eyjafjï¿½rï¿½ur, Island. Verï¿½ffentlicht wurde die Software unter Apache License 2.0. Die Ausfï¿½hrung findet auf einem Linux Kernel statt.
 \\
 \\
 Verwendung findet Dalvik in Googles Betriebssystem Android. Einsatz findet Dalvik hierbei als virtuelle Maschine. Der Hauptverwendungsbereich liegt im Mobilbereich, wie zum Beispiel bei Smartphones, Tablets und seit neuestem auch bei Smart Tvs und Wearables, wie Smartwatches.
 
 
-\section{Architektur}
-In diesem Kapitel wird die Architektur der Dalvik Virtual Machine erklärt. Besonderes Augenmerk wird hierbei auf den Aufbau der \member{.dex} Datei gelegt.
+\section{Architektur\cite{2}}
+In diesem Kapitel wird die Architektur der Dalvik Virtual Machine erklï¿½rt. Besonderes Augenmerk wird hierbei auf den Aufbau der \member{.dex} Datei gelegt.
 
 
 \subsection{Funktion}
-In Android bekommt jeder Prozess seine eigene virtuelle Maschine, dabei handelt es sich um eine Dalvik VM. Sie ähnelt teilweise einer Java VM. Ein bedeutender Unterschied ist allerdings, dass eine Java VM stapelbasiert und eine Dalvik VM registerbasiert arbeitet. Diese registerbasierte Arbeitsweise lehnt sich an moderne Prozessorarchitekturen an. Sie verarbeitet Registermaschinencode, dadurch wird die Dalivk VM schneller als die Java VM und ist ressourcenschonender.
+In Abbildung 2 ist die allgemeine Architektur von Android zu sehen. In ihr sieht man, dass die Dalvik Virtual Machine Teil der Android Runtime ist. In Android bekommt jeder Prozess seine eigene virtuelle Maschine, bei dieser handelt es sich um eine Dalvik VM. Sie ï¿½hnelt teilweise einer Java VM. Ein bedeutender Unterschied ist allerdings, dass eine Java VM stapelbasiert und eine Dalvik VM registerbasiert arbeitet. Diese registerbasierte Arbeitsweise lehnt sich an moderne Prozessorarchitekturen an. Sie verarbeitet Registermaschinencode, dadurch wird die Dalivk VM schneller als die Java VM und ist ressourcenschonender.
+\\
+\begin{figure*}
+\centering
+\includegraphics[width=0.825\textwidth]{AndroidArchitecture}
+\caption{Android Architektur\cite{1}}
+\label{fig:AndroidArchitecture}
+\end{figure*}
+\\
+Ein weiterer bedeutender Unterschied liegt darin, dass eine Dalvik VM klassische Java Bibliotheken nicht unterstï¿½tzt, zum Beispiel \member{AWT} und \member{Swing}. Es werden eigene Bibliotheken verwendet, die Apache Harmony als Grundlage verwenden.
 \\
 \\
-Ein weiterer bedeutender Unterschied liegt darin, dass eine Dalvik VM klassische Java Bibliotheken nicht unterstützt, zum Beispiel \member{AWT} und \member{Swing}. Es werden eigene Bibliotheken verwendet, die Apache Harmony als Grundlage verwenden.
+Ein wichtiger Bestandteil der \member{SDK} ist das Tool \member{dx}. Es sorgt dafï¿½r, dass Java Binï¿½rdaten in Dalvik Executables umgewandelt werden. Das heiï¿½t es wandelt \member{.class} Dateien in \member{.dex} Dateien um. Bei dieser Umwandlung kï¿½nnen auch mehrere \member{.class} Dateien zu einer \member{.dex} Datei zusammengefasst werden, beziehungsweise kann der Speicherbedarf, mithilfe von \member{.odex} Dateien optimiert werden. 
 \\
 \\
-Ein wichtiger Bestandteil der \member{SDK} ist das Tool \member{dx}. Es sorgt dafür, dass Java Binärdaten in Dalvik Executables umgewandelt werden. Das heißt es wandelt \member{.class} Dateien in \member{.dex} Dateien um. Bei dieser Umwandlung können auch mehrere \member{.class} Dateien zu einer \member{.dex} Datei zusammengefasst werden, beziehungsweise kann der Speicherbedarf, mithilfe von \member{.odex} Dateien optimiert werden.
+In Abbildung 3 ist ein solcher Vorgang beispielhaft dargestellt. Zuerst werden die \member{.java} Dateien in \member{.class} Dateien kompiliert. Nach dem Kompiliervorgang werden die Binï¿½rdateien und die \member{.class} Dateien mithilfe des \member{dx} Tools zu eienr \member{.dex} Datei konvertiert. Mithilfe dieser Datei kann nun eine \member{.apk} Datei erstellt werden. Bei dieser handelt es sich um die Applikationsdatei mit der, der Endbenutzer die Anwendung auf seinem Mobiltelefon installiert.
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth]{ClassToDex}
+\caption{Android Kompiliervorgang\cite{7}}
+\label{fig:ClassToDex}
+\end{figure*}
 
 
 \subsection{.dex Format}
-In .dex Dateien werden die Klassen Definitionen und die dazugehörigen Daten gespeichert. Es handelt sich dabei um die ausführbaren Dateien der Dalvik VM. Android Programme werden zuerst in Java Bytecode kompiliert. Dieser wird im Anschluss in Dalvik Bytecode übersetzt. 
+In .dex Dateien werden die Klassen Definitionen und die dazugehï¿½rigen Daten gespeichert. Es handelt sich dabei um die ausfï¿½hrbaren Dateien der Dalvik VM. Android Programme werden zuerst in Java Bytecode kompiliert. Dieser wird im Anschluss in Dalvik Bytecode ï¿½bersetzt. 
 \\
 \\
-In Abbildung 1 ist der Aufbau einer .dex Datei im Vergleich zu einer .class Datei von Java zu sehen. Für alle folgenden Listen der Datei dürfen keine doppelten Einträge vorhanden sein.
+In Abbildung 4 ist der Aufbau einer .dex Datei im Vergleich zu einer .class Datei von Java zu sehen. Fï¿½r alle folgenden Listen der Datei dï¿½rfen keine doppelten Eintrï¿½ge vorhanden sein.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.4\textwidth]{DexFileFormat}
-\caption{Dex Dateiformat}
+\caption{Dex Dateiformat\cite{1}}
 \label{fig:DexFileFormat}
 \end{figure}
 
 \subsubsection{Header}
 In Ausschnitt 1 ist der Header der \member{.dex} Datei zu sehen. Dabei handelt es sich um eine bestimmte Bytefolge die den Start der Datei bestimmt.
 
-\begin{lstlisting}[float,floatplacement=H,caption=Dex Header]
+\begin{lstlisting}[float,floatplacement=H,caption=Dex Header\cite{2}]
 ubyte[8] DEX_FILE_MAGIC = 
 { 0x64 0x65 0x78 0x0a 0x30 0x33 0x35 0x00 } 
 = "dex\n035\0"
@@ -72,30 +114,49 @@ ubyte[8] DEX_FILE_MAGIC =
 \end{lstlisting}
 
 \subsubsection{StringIds}
-Hierbei handelt es sich um eine Liste aller Strings die in der Datei verwendet werden. Die Liste muss sortiert sein und darf keine doppelten Einträge enthalten. Mögliche Inhalte sind zum Beispiel konstante Strings und Funktionsnamen.
+Hierbei handelt es sich um eine Liste aller Strings die in der Datei verwendet werden. Die Liste muss sortiert sein und darf keine doppelten Eintrï¿½ge enthalten. Mï¿½gliche Inhalte sind zum Beispiel konstante Strings und Funktionsnamen.
 
 \subsubsection{TypeIds}
-Dies ist eine Liste aller verwendeten Typen dieser Datei. Dazu gehören Klassen, Arrays, und Primitive Datentypen. Diese Liste ist nach den \member{StringIds} sortiert.
+Dies ist eine Liste aller verwendeten Typen dieser Datei. Dazu gehï¿½ren Klassen, Arrays, und Primitive Datentypen. Diese Liste ist nach den \member{StringIds} sortiert.
 
 \subsubsection{ProtoIds}
-In dieser Liste befinden sich alle Methoden Prototypen, die in \member{.dex} Datei verwendet werden. Die Prototypen sind primär anhand ihrer Rückgabetypen sortiert und danach anhand ihrer Argumente.
+In dieser Liste befinden sich alle Methoden Prototypen, die in \member{.dex} Datei verwendet werden. Die Prototypen sind primï¿½r anhand ihrer Rï¿½ckgabetypen sortiert und danach anhand ihrer Argumente.
 
 \subsubsection{FieldIds}
-Diese Liste enthält alle Felder die von der \member{.dex} Datei referenziert werden. Diese Liste wird anhand des Feldtypen und Feldnamen sortiert.
+Diese Liste enthï¿½lt alle Felder die von der \member{.dex} Datei referenziert werden. Diese Liste wird anhand des Feldtypen und Feldnamen sortiert.
 
 \subsubsection{MethodIds}
 In der Methoden Liste werden alle von der \member{.dex} Datei referenzierten Methoden aufgelistet. Diese Liste wird nach dem Methodennamen und dem Methodenprototypen sortiert.
 
 \subsubsection{ClassDefs}
-In dieser Liste werden die Klassendefinitionen der \member{.dex} Datei angegeben. Die Liste muss so geordnet werden, dass übergeordnete Klassen und Interfaces vor den davon ableitenden Klassen angeführt werden.
+In dieser Liste werden die Klassendefinitionen der \member{.dex} Datei angegeben. Die Liste muss so geordnet werden, dass ï¿½bergeordnete Klassen und Interfaces vor den davon ableitenden Klassen angefï¿½hrt werden.
 
 \subsubsection{Data}
-In dem Data werden zusätzliche Daten für die oben angeführten Listen gespeichert. Die verschiedenen Elemente haben verschiedene Alignements und padding bytes werden, wenn notwendig, eingefügt. Des weiteren befinden sich in diesem Bereich die Daten von statisch verlinkten Dateien. Bei nicht verlinkten Dateien ist dieser Teilbereich leer.
+In dem Data werden zusï¿½tzliche Daten fï¿½r die oben angefï¿½hrten Listen gespeichert. Die verschiedenen Elemente haben verschiedene Alignements und padding bytes werden, wenn notwendig, eingefï¿½gt. Des weiteren befinden sich in diesem Bereich die Daten von statisch verlinkten Dateien. Bei nicht verlinkten Dateien ist dieser Teilbereich leer.
 
 
-\subsection{Bytecode}
+\subsection{Bytecode \& Instruction Format}
+Das Modell der Dalvik VM ist an eine echte Architektur angelegt und soll Calling Conventions C Ã¤hnlich realisieren. 
+Die Dalvik VM ist registerbasiert und ihre Frames bekommen bei der Erstellung eine fixe GrÃ¶ÃŸe zugewiesen. Jedes Frame besteht aus einer bestimmten Anzahl an Registern, die von einer Methode aus dem Bytecode Set vorgegeben wird. ZusÃ¤tzlich beinhaltet das Frame noch alle zusÃ¤tzlich benÃ¶tigten Daten, so wie zum Beispiel Program Counter und die \member{.dex} Datei die die Methode beinhaltet.
+FÃ¼r Bitwerte, wie zum Beispiel \member{integer} und Gleitkommazahlen sind Register 32-Bit lang. FÃ¼r 64-Bit Werte wird mit einem anliegenden Register ein Paar gebildet. FÃ¼r Registerpaare wird kein Alignement benÃ¶tigt. Wenn die Register fÃ¼r Objekt Referenzen benutzt werden, dann sind sie groÃŸ genug um exakt eine Referenz zu speichern. Bei einem Methodenaufruf werden N Argumente der Methode in den N letzten Registern des Frames der Methode platziert. GrÃ¶ÃŸere Argumente benÃ¶tigen hierbei 2 Register. Methoden einer Instanz bekommen als ersten Parameter zusÃ¤tzlich eine \member{this} Referenz Ã¼bergeben.
+\\
+\\
+Instruktionen sind nicht auf Datentypen limitiert, solange sie den Inhalt der Register nicht interpretieren. Ein Beispiel dafÃ¼r ist der \member{move} Befehl, ihm ist es egal ob er \member{integer} oder \member{floats} verschiebt. Die meisten Instruktionen sind bei ihrer AusfÃ¼hrung auf die ersten 16 Register limitiert und kÃ¶nnen auf hÃ¶here Register nicht zugreifen. Wenn es mÃ¶glich ist erlauben einige Instruktionen, aber auch Zugriff auf die ersten 256 Register. In einigen AusnahmefÃ¤llen wie zum Beispiel einzelnen \member{move} Instruktionen ist es mÃ¶glich auf Register zwischen 0 und 65535 zuzugreifen.
+UnterstÃ¼tzt eine Instruktion das gewÃ¼nschte Register nicht muss das hohe Register vor der Operation in ein niederes Register kopiert und nach der Operation wieder zurÃ¼ck kopiert werden.
+\\
+\\
+Die Dalvik VM besitzt einige Pseudoinstruktionen, die dazu verwendet werden um Daten mit variabler LÃ¤nge zu verarbeiten zum Beispiel \member{fill-array-data}. Diese Instruktionen mÃ¼ssen auf 4 Byte aligned sein. Um dieses Ziel zu erreichen werden bei der Generierung der \member{.dex} Datei wenn nÃ¶tig \member{nop} Instruktionen eingefÃ¼gt. Wenn die Applikation auf einem System installiert wird kÃ¶nnen manche Instruktionen, aufgrund von Optimierungen, verÃ¤ndert werden. Damit kann eine schnellere AusfÃ¼hrung am System erreicht werden.
+\\
+\\
+In Abbildung 5 sind einige Beispielinstruktionen der Dalvik VM zu sehen. Die Syntax ist so aufgebaut das zuerst das Ziel- und danach das Quellregister angegeben wird. Manche Opcodes haben Namenserweiterungen um gewisse Eigenschaften anzuzeigen. Zum Beispiel wird bei 64 Bit Opcodes \member{-wide} hinzugefÃ¼gt und bei typenspezifischen Opcodes wird der Typ hinzugefÃ¼gt, \member{-char}.
+Anhand des \member{move-wide/from16 vAA, vBBBB} Opcodes lassen sich diese Eigenschaften gut erkennen.
 
-\subsection{Instruction Format}
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{ByteCode}
+\caption{Dalvik VM Instruktionen\cite{2}}
+\label{fig:ByteCode}
+\end{figure}
 
 
 \section{Android Runtime}
@@ -103,5 +164,9 @@ In dem Data werden zusätzliche Daten für die oben angeführten Listen gespeichert
 \subsection{Allgemein}
 
 \subsection{Vergleich zu Dalvik VM}
+
+\bibliographystyle{IEEEtran}
+
+\bibliography{IEEEexample}
 
 \end{document}
