@@ -1,10 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.11)  11 NOV 2014 15:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.27)  11 NOV 2014 21:47
 entering extended mode
-**U:/Github/EOS/Pr√§sentation/DalvikVM/EEM11_LaTeX_template.tex
-(U:/Github/EOS/Pr√§sentation/DalvikVM/EEM11_LaTeX_template.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 68 languages loaded.
-(U:\Github\EOS\Pr√§sentation\DalvikVM\IEEEtran.cls
+**D:/GitHub/EOS/Pr√§sentation/DalvikVM/EEM11_LaTeX_template.tex
+(D:/GitHub/EOS/Pr√§sentation/DalvikVM/EEM11_LaTeX_template.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(D:\GitHub\EOS\Pr√§sentation\DalvikVM\IEEEtran.cls
 Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -15,7 +24,7 @@ Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+("E:\Programme\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 210mm x 297mm (a4) paper.
@@ -84,27 +93,27 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) ("E:\Programme\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen117
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen118
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -145,34 +154,34 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks20
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("E:\Programme\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("E:\Programme\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("E:\Programme\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("E:\Programme\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count103
@@ -184,11 +193,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfysize=\dimen129
 )
 \@input{kommandos.aux}
-(U:\Github\EOS\Pr√§sentation\DalvikVM\kommandos.tex
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+(D:\GitHub\EOS\Pr√§sentation\DalvikVM\kommandos.tex
+("E:\Programme\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen130
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count104
 \lst@gtempboxa=\box29
 \lst@token=\toks21
@@ -202,43 +211,43 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count109
 \lst@maxwidth=\dimen134
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count110
 \lst@skipnumbers=\count111
 \lst@framebox=\box30
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+("E:\Programme\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+("E:\Programme\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("E:\Programme\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+("E:\Programme\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 ))
-(U:\Github\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+(D:\GitHub\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("E:\Programme\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen135
@@ -253,161 +262,124 @@ LaTeX Font Info:    ... okay on input line 41.
 \everyMPtoPDFconversion=\toks23
 )
 \c@lstlisting=\count118
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 Missing character: There is no √ in font ptmri7t!
 Missing character: There is no ∂ in font ptmri7t!
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 42.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 43.
+ ("E:\Programme\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 42.
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 43.
 Missing character: There is no √ in font ptmri7t!
 Missing character: There is no ∂ in font ptmri7t!
 
-<Android_robot.png, id=1, 875.27pt x 1027.84pt>
-File: Android_robot.png Graphic file (type png)
- <use Android_robot.png>
-Package pdftex.def Info: Android_robot.png used on input line 51.
+<AndroidRobot.png, id=1, 875.27pt x 1027.84pt>
+File: AndroidRobot.png Graphic file (type png)
+ <use AndroidRobot.png>
+Package pdftex.def Info: AndroidRobot.png used on input line 52.
 (pdftex.def)             Requested size: 129.0pt x 151.47177pt.
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 
-Underfull \hbox (badness 5985) in paragraph at lines 57--61
+Underfull \hbox (badness 5985) in paragraph at lines 58--62
 \OT1/ptm/m/n/11 Mas-chine. Der Hauptver-wen-dungs-bere-ich liegt im
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 57--61
+Underfull \hbox (badness 3199) in paragraph at lines 58--62
 \OT1/ptm/m/n/11 Mo-bil-bere-ich, wie zum Beispiel bei Smart-phones,
  []
 
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 <AndroidArchitecture.png, id=3, 788.19469pt x 564.60938pt>
 File: AndroidArchitecture.png Graphic file (type png)
 
 <use AndroidArchitecture.png>
-Package pdftex.def Info: AndroidArchitecture.png used on input line 72.
+Package pdftex.def Info: AndroidArchitecture.png used on input line 73.
 (pdftex.def)             Requested size: 425.69843pt x 304.9362pt.
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 
-Underfull \hbox (badness 3826) in paragraph at lines 68--84
+Underfull \hbox (badness 3826) in paragraph at lines 69--85
 []\OT1/ptm/m/n/11 In Ab-bil-dung 2 ist die all-ge-meine Ar-chitek-tur
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 68--84
+Underfull \hbox (badness 1496) in paragraph at lines 69--85
 \OT1/ptm/m/n/11 Dalvik Vir-tual Ma-chine Teil der An-droid Run-time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 69--85
 
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 68--84
+Underfull \hbox (badness 4699) in paragraph at lines 69--85
 \OT1/ptm/m/n/11 Ein weit-erer be-deu-ten-der Un-ter-schied liegt darin,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 69--85
 
  []
 
 
-Underfull \hbox (badness 3579) in paragraph at lines 68--84
-\OT1/ptm/m/n/11 umge-wan-delt wer-den. Das heit es wan-delt \OT1/ptm/m/it/11 .c
-lass
+Underfull \hbox (badness 3657) in paragraph at lines 69--85
+\OT1/ptm/m/n/11 Ein wichtiger Be-standteil der \OT1/ptm/m/it/11 SDK \OT1/ptm/m/
+n/11 ist das Tool
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 69--85
+\OT1/ptm/m/n/11 Ex-e-cuta-bles umge-wan-delt wer-den. Das heist es
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 69--85
+\OT1/ptm/m/n/11 wan-delt \OT1/ptm/m/it/11 .class \OT1/ptm/m/n/11 Dateien in \OT
+1/ptm/m/it/11 .dex \OT1/ptm/m/n/11 Dateien um. Bei
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 69--85
+\OT1/ptm/m/n/11 dieser Umwand-lung koen-nen auch mehrere \OT1/ptm/m/it/11 .clas
+s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
-\OT1/ptm/m/n/11 Dateien kom-piliert. Nach dem Kom-pilier-vor-gang
+Underfull \hbox (badness 1762) in paragraph at lines 69--85
+\OT1/ptm/m/it/11 dx \OT1/ptm/m/n/11 Tools zu eienr \OT1/ptm/m/it/11 .dex \OT1/p
+tm/m/n/11 Datei kon-vertiert. Mithilfe
  []
 
 <ClassToDex.png, id=4, 617.30624pt x 186.6975pt>
 File: ClassToDex.png Graphic file (type png)
  <use ClassToDex.png>
-Package pdftex.def Info: ClassToDex.png used on input line 87.
+Package pdftex.def Info: ClassToDex.png used on input line 88.
 (pdftex.def)             Requested size: 516.0pt x 156.0699pt.
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 
-Underfull \hbox (badness 4886) in paragraph at lines 94--98
-\OT1/ptm/m/n/11 kom-piliert. Dieser wird im An-schluss in Dalvik
+Underfull \hbox (badness 4108) in paragraph at lines 95--99
+\OT1/ptm/m/n/11 VM. An-droid Pro-gramme wer-den zuerst in Java
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Underfull \hbox (badness 1533) in paragraph at lines 95--99
+\OT1/ptm/m/n/11 Byte-code kom-piliert. Dieser wird im An-schluss in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 94--98
+Underfull \hbox (badness 2334) in paragraph at lines 95--99
 \OT1/ptm/m/n/11 In Ab-bil-dung 4 ist der Auf-bau einer .dex Datei
  []
 
@@ -419,59 +391,23 @@ Underfull \vbox (badness 2343) has occurred while \output is active []
 
 
 
- <U:/Github/EOS/Pr√§sentation/DalvikVM/Android_robot.png>] <DexFileFormat.png, 
-id=16, 322.20375pt x 629.35126pt>
+ <D:/GitHub/EOS/Pr√§sentation/DalvikVM/AndroidRobot.png>] <DexFileFormat.png, i
+d=16, 322.20375pt x 629.35126pt>
 File: DexFileFormat.png Graphic file (type png)
 
 <use DexFileFormat.png>
-Package pdftex.def Info: DexFileFormat.png used on input line 101.
+Package pdftex.def Info: DexFileFormat.png used on input line 102.
 (pdftex.def)             Requested size: 206.39685pt x 403.16756pt.
 
-Overfull \hbox (6.00262pt too wide) in paragraph at lines 111--112
+Overfull \hbox (6.00262pt too wide) in paragraph at lines 112--113
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 
 Underfull \vbox (badness 1655) has occurred while \output is active []
 
- [2 <U:/Github/EOS/Pr√§sentation/DalvikVM/AndroidArchitecture.png> <U:/Github/E
+ [2 <D:/GitHub/EOS/Pr√§sentation/DalvikVM/AndroidArchitecture.png> <D:/GitHub/E
 OS/Pr√§sentation/DalvikVM/ClassToDex.png>]
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no Ω in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no § in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
@@ -544,66 +480,395 @@ Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
 
-Underfull \hbox (badness 2253) in paragraph at lines 139--153
+Underfull \hbox (badness 2253) in paragraph at lines 140--154
 []\OT1/ptm/m/n/11 Das Mod-ell der Dalvik VM ist an eine echte
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 139--153
+Underfull \hbox (badness 1629) in paragraph at lines 140--154
 \OT1/ptm/m/n/11 aus dem Byte-code Set vorgegeben wird. Zust-zlich
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 139--153
+Underfull \hbox (badness 1694) in paragraph at lines 140--154
 \OT1/ptm/m/n/11 bein-hal-tet das Frame noch alle zust-zlich bentigten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--153
+Underfull \hbox (badness 10000) in paragraph at lines 140--154
 
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 139--153
+Underfull \hbox (badness 5189) in paragraph at lines 140--154
 \OT1/ptm/m/n/11 Instruktionen sind nicht auf Da-ten-typen lim-i-tiert,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--153
+Underfull \hbox (badness 10000) in paragraph at lines 140--154
 
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 139--153
+Underfull \hbox (badness 1648) in paragraph at lines 140--154
 \OT1/ptm/m/n/11 Die Dalvik VM be-sitzt einige Pseu-doin-struk-tio-nen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--153
+Underfull \hbox (badness 10000) in paragraph at lines 140--154
 
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 139--153
+Underfull \hbox (badness 1924) in paragraph at lines 140--154
 \OT1/ptm/m/it/11 -char\OT1/ptm/m/n/11 . An-hand des \OT1/ptm/m/it/11 move-wide/
 from16 vAA, vBBBB
  []
 
-[3 <U:/Github/EOS/Pr√§sentation/DalvikVM/DexFileFormat.png>]
-<ByteCode.png, id=26, 531.48563pt x 806.26219pt>
+[3 <D:/GitHub/EOS/Pr√§sentation/DalvikVM/DexFileFormat.png>]
+<ByteCode.png, id=26, 535.2497pt x 581.92406pt>
 File: ByteCode.png Graphic file (type png)
  <use ByteCode.png>
-Package pdftex.def Info: ByteCode.png used on input line 156.
-(pdftex.def)             Requested size: 206.39685pt x 313.1123pt.
+Package pdftex.def Info: ByteCode.png used on input line 157.
+(pdftex.def)             Requested size: 309.60315pt x 336.61937pt.
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
 
-(U:\Github\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 Dabei wer-den Pro-gramme oder Pro-grammteile
+ []
+
+
+Underfull \hbox (badness 5374) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 zur Laufzeit in Maschi-nen-code bersetzt. Da die
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 der Ausfhrungszeit des Pro-gramms ve-r-ant-wortlich,
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 we-shalb sich deren Kom-pi-la-tion und Op-ti-mierung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 Die Auf-gabe des JIT-Compilers ist es, diese
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 Pro-grammteile zu iden-ti-fizieren, zu op-ti-mieren und
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 167--171
+\OT1/ptm/m/n/11 vom Prozes-sor di-rekt aus-gefhrt wer-den kann. Der
+ []
+
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+<DalvikVMARTVergleich.png, id=27, 530.73282pt x 292.09125pt>
+File: DalvikVMARTVergleich.png Graphic file (type png)
+
+<use DalvikVMARTVergleich.png>
+Package pdftex.def Info: DalvikVMARTVergleich.png used on input line 187.
+(pdftex.def)             Requested size: 516.0pt x 284.0056pt.
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \hbox (badness 2856) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 Ahead-of-time-Compiler (AOT-Compiler). Ein AOT-
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 Compiler ist ein Com-piler, der im Gegen-satz zu
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 wesentlich schneller aus-gefhrt wird als auf einem
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 In-stal-la-tion einer App in maschi-nen-les-baren Code
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 durch ART er-he-blich maschi-nennher als Dalvik
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 for-muliert wird und somit weniger Rechenaufwand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--193
+
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 ART und Dalvik sind kom-pat-i-blel zueinan-der, das
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 177--193
+\OT1/ptm/m/n/11 In-put Byte-code wie Dalvik, geliefert mit Stan-dard
+ []
+
+[4]
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no √ in font ptmri7t!
+Missing character: There is no º in font ptmri7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+
+<traceviewTimeline.png, id=31, 896.34875pt x 285.065pt>
+File: traceviewTimeline.png Graphic file (type png)
+
+<use traceviewTimeline.png>
+Package pdftex.def Info: traceviewTimeline.png used on input line 209.
+(pdftex.def)             Requested size: 516.0pt x 164.10683pt.
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+
+<traceviewProfile.png, id=32, 895.345pt x 632.3625pt>
+File: traceviewProfile.png Graphic file (type png)
+
+<use traceviewProfile.png>
+Package pdftex.def Info: traceviewProfile.png used on input line 218.
+(pdftex.def)             Requested size: 516.0pt x 364.44508pt.
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \hbox (badness 4108) in paragraph at lines 201--224
+\OT1/ptm/m/n/11 zu pro-tokol-lieren. Die log-Dateien kn-nen geladen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--224
+
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 201--224
+\OT1/ptm/m/n/11 Timeline Panel (Ab-bil-dung 7): zeigt wann jeder
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--224
+
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 201--224
+\OT1/ptm/m/n/11 Profile Panel (Ab-bil-dung 8): stellt einen berblick
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--224
+
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 201--224
+\OT1/ptm/m/n/11 ART un-ter-sttzt einen geeigneten Pro-filer der diese
+ []
+
+
+Underfull \hbox (badness 5105) in paragraph at lines 201--224
+\OT1/ptm/m/n/11 Ein-schrnkun-gen nicht hat. Dadurch gibt es eine
+ []
+
+[5 <D:/GitHub/EOS/Pr√§sentation/DalvikVM/ByteCode.png>]
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no û in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no û in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <D:/GitHub/EOS/Pr√§sentation/DalvikVM/DalvikVMARTVergleich.png> <D:/GitHub/
+EOS/Pr√§sentation/DalvikVM/traceviewTimeline.png>]
+(D:\GitHub\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 26--29
 []\OT1/ptm/m/n/9 Android logo. [On-line]. Avail-able:
  []
 
 
-Overfull \hbox (82.59079pt too wide) in paragraph at lines 26--29
+Overfull \hbox (87.09079pt too wide) in paragraph at lines 26--29
 \OT1/ptm/m/n/9 http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android
 []robot.svg/872px-
  []
@@ -619,7 +884,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 44--47
+Underfull \hbox (badness 2951) in paragraph at lines 44--47
 []\OT1/ptm/m/n/9 D. Born-stein. Dalvik vm in-ter-nals. [On-
  []
 
@@ -630,12 +895,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44--47
-\OT1/ptm/m/n/9 sites.googlegroups.com/site/io/dalvik-vm-internals/2008-05-
+\OT1/ptm/m/n/9 sites.googlegroups.com/site/io/dalvik-vm-internals/2008-
  []
 
 
-Underfull \hbox (badness 5316) in paragraph at lines 50--53
+Underfull \hbox (badness 4217) in paragraph at lines 50--53
 []\OT1/ptm/m/n/9 Android kom-pilier-vor-gang. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+[]\OT1/ptm/m/n/9 Android run-time. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 68--71
+[]\OT1/ptm/m/n/9 Ahead of time com-piler. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 1424) in paragraph at lines 74--77
+[]\OT1/ptm/m/n/9 Dalvik vm art ver-gle-ich. [On-line]. Avail-able:
+ []
+
+
+Overfull \hbox (25.44135pt too wide) in paragraph at lines 74--77
+\OT1/ptm/m/n/9 http://www.droidwiki.de/images/9/9e/Dalvik[]VM[]ART[]Vergleich.p
+ng 
+ []
+
+[7 <D:/GitHub/EOS/Pr√§sentation/DalvikVM/traceviewProfile.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
+[]\OT1/ptm/m/n/9 Introducing art. [On-line]. Avail-able:
  []
 
 )
@@ -650,26 +941,27 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <U:/Github/EOS/Pr√§sentation/DalvikVM/ByteCode.png>]
-(U:\Github\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.aux) ) 
+[8
+
+] (D:\GitHub\EOS\Pr√§sentation\DalvikVM\EEM11_LaTeX_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3898 strings out of 493706
- 57352 string characters out of 3142110
- 152919 words of memory out of 3000000
- 7186 multiletter control sequences out of 15000+200000
+ 3937 strings out of 493921
+ 57398 string characters out of 3148877
+ 151548 words of memory out of 3000000
+ 7195 multiletter control sequences out of 15000+200000
  37117 words of font info for 75 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 34i,10n,42p,694b,1090s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
-r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EEM11_LaTeX_template.pdf (4 pages, 601185 bytes).
+ 841 hyphenation exceptions out of 8191
+ 34i,10n,42p,723b,1090s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/Programm
+e/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<E:/Programme/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb><E:/Programme/MiKTeX 2.9/fonts/type1/urw/courier
+/ucrr8a.pfb><E:/Programme/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><E:/Progr
+amme/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><E:/Programme/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb><E:/Programme/MiKTeX 2.9/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on EEM11_LaTeX_template.pdf (8 pages, 765530 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
