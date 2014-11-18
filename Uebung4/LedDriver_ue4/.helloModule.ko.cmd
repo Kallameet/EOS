@@ -1,0 +1,1 @@
+cmd_/tmp/ue3-files/HelloDriver/helloModule.ko := arm-linux-ld -EL  -r -o /tmp/ue3-files/HelloDriver/helloModule.ko /tmp/ue3-files/HelloDriver/helloModule.o /tmp/ue3-files/HelloDriver/helloModule.mod.o
