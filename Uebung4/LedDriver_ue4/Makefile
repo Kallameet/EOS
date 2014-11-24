@@ -1,6 +1,6 @@
 ifneq ($(KERNELRELEASE),)
 	obj-m:= ledDriverModule.o
-	ledDriverModule-objs:= ledDriver.o
+	ledDriverModule-objs:= ledDriver.o hwaccess.o
 else
 	KERNELDIR ?= /root/pxadev/kernel/linux-2.6.12.4-col2/
 	PWD := $(shell pwd)
