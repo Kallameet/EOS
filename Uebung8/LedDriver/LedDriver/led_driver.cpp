@@ -57,7 +57,11 @@ BOOL APIENTRY DllMain( HANDLE hModule,
 }
 
 DWORD WINAPI ISTFunction(LPVOID lpParam)
-{
+{	
+	isr_info.pGPIORegs->gafr2_l &= ~(1 << 31 | 1 << 30); // set alternate function 0 for GPIO79
+	isr_info.pGPIORegs->gpdr2   |= (1 << 15);  //set GPIO79 as output
+
+	RETAILMSG(RETAIL_ON, (TEXT("ISTFunction start \r\n")));
 	if (lpParam != 0)
 	{
 		HANDLE hEvent = (HANDLE) lpParam;
@@ -69,14 +73,15 @@ DWORD WINAPI ISTFunction(LPVOID lpParam)
 
 				if (!KillFlag)
 				{
-
-					setLeds(isr_info.pGPIORegs, 0x01);
-					setLeds(isr_info.pGPIORegs, 0x00);
+					RETAILMSG(RETAIL_ON, (TEXT("ISTFunction setLed 1 \r\n")));
+					isr_info.pGPIORegs->gpsr2 = (1 << 15); // reset GPIO79
+					RETAILMSG(RETAIL_ON, (TEXT("ISTFunction clearLed 1 \r\n")));
+					isr_info.pGPIORegs->gpcr2 = (1 << 15); // set GPIO79
 				}
 			}
 		}
 	}
-
+	RETAILMSG(RETAIL_ON, (TEXT("ISTFunction end \r\n")));
 	return 0;
 }
 
@@ -85,7 +90,7 @@ DWORD WINAPI ISTFunction(LPVOID lpParam)
 //
 DWORD LED_Init(LPCSTR pContext, DWORD dwBusContext){
 	PDRVCONTEXT pDrv;
-
+	RETAILMSG(RETAIL_ON, (TEXT("Test debug output without context \r\n")));
 	RETAILMSG(RETAIL_ON, (TEXT("LED_Init++ dwContext: %x\r\n"), pContext));
 
 	// Allocate a driver instance structure - required if we want to manage
@@ -138,7 +143,7 @@ DWORD LED_Init(LPCSTR pContext, DWORD dwBusContext){
 		return 0;
 	}
 
-	pDrv->hIsrHandle = LoadIntChainHandler(TEXT("ISRDll.dll"), TEXT("ISRHandler"), dwIrq);
+	pDrv->hIsrHandle = LoadIntChainHandler(TEXT("\\Program Files\\Drivers\\ISRDll.dll"), TEXT("ISRHandler"), dwIrq);
 	if (!pDrv->hIsrHandle)
 	{
 		RETAILMSG(RETAIL_ON, (DTAG TEXT("LED_Init failure. LoadIntChainHandler failed.\r\n"), pContext));
@@ -232,7 +237,7 @@ DWORD LED_Open(DWORD dwContext, DWORD dwAccess, DWORD dwShare){
 	{
 		return 0;
 	}
-	initLeds(pGPIORegs);
+	
 	initPushButtons(pGPIORegs);
 	initSwitches(pGPIORegs);
 

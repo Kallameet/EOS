@@ -85,8 +85,8 @@ BOOL IOControl(DWORD   InstanceIndex,
 
 			// Do some initializations:
 			g_dwValue=0;
-			g_pGPIORegs->gafr2_l &= ~(1 << 31 | 1 << 30); // set alternate function 0 for GPIO79
-			g_pGPIORegs->gpdr2   |= (1 << 15);  //set GPIO79 as output
+			g_pGPIORegs->gafr1_l &= ~(1 << 9 | 1 << 8); // set alternate function 0 for GPIO36
+			g_pGPIORegs->gpdr1   |= (1 << 4);  //set GPIO36 as output
 
 			RETAILMSG(1, (TEXT("Inst. ISR DLL: ") TEXT("IOCTL: got SYSINTR: %u , GPIO: %u \r\n"),g_dwSysIntr, g_pGPIORegs));
 
@@ -118,12 +118,13 @@ BOOL IOControl(DWORD   InstanceIndex,
 
 
 DWORD ISRHandler(DWORD InstanceIndex){
-	
-	g_pGPIORegs->gpsr2 = (1 << 15); // set GPIO79 -> LED1 on
+	RETAILMSG(1, (TEXT("ISRHandler setLed \r\n")));
+	g_pGPIORegs->gpsr1 = (1 << 4); // set GPIO36 -> LED1 on
 	
 	g_dwValue++;
-	
-	g_pGPIORegs->gpcr2 = (1 << 15); // reset GPIO79 -> LED1 off
+
+	//RETAILMSG(1, (TEXT("ISRHandler clearLed \r\n")));
+	g_pGPIORegs->gpcr1 = (1 << 4); // reset GPIO36 -> LED1 off
 
 	// if this isr is used to handle a shared interrupt, here we should check if this interrupt is really intended for us.
 	// If it's for us we retrun g_dwSysIntr, if it's not for us we should retrun SYSINTR_CHAIN
